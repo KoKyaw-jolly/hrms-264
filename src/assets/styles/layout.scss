@@ -1,0 +1,13 @@
+@import '../../tokens/build/scss/variables.scss';
+@import '../styles/variables.scss';
+
+.main-card-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    background-color: #fff;
+    border-radius: $border-radius-lg;
+    padding: $padding-lg;
+    box-shadow: $card-box-shadow;
+}

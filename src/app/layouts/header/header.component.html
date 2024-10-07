@@ -1,0 +1,66 @@
+<div class="header-wrapper">
+    <img [src]="images.PROFILE" alt="" class="header-wrapper__avatar-img">
+    <div class="header-wrapper__info">
+        <h5 nz-typography class="name">Lucas Bennett</h5>
+        <p nz-typography class="position">HR Manager</p>
+    </div>
+    <div class="header-wrapper__actions">
+        <i class="fi fi-rr-daily-calendar" nz-popover nzPopoverTitle="Calendar"
+            [nzPopoverContent]="calendarContentTemplate" nzPopoverTrigger="click" nzPopoverPlacement="bottomRight"></i>
+        <ng-template #calendarContentTemplate>
+            <div class="calendar-dropdown-content-wrapper">
+                <div class="calendar-wrapper">
+                    <nz-calendar [nzFullscreen]="false"></nz-calendar>
+                </div>
+                <span class="fullCalendar">View Full Calendar</span>
+            </div>
+        </ng-template>
+        <i class="fi fi-rr-bell" nz-popover nzPopoverTitle="Notifications" [nzPopoverContent]="notiContentTemplate"
+            nzPopoverTrigger="click" nzPopoverPlacement="bottomRight"></i>
+        <ng-template #notiContentTemplate>
+            <div class="notification-dropdown-wrapper">
+                <div class="notification-item">
+                    <div class="notification-item__header">
+                        <span class="title">Title</span>
+                        <span class="date">Date</span>
+                    </div>
+                    <div class="notification-item__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque vitae, commodi quisquam in
+                        obcaecati praesentium
+                        ... <span class="seeMore">See More</span>
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-item__header">
+                        <span class="title">Title</span>
+                        <span class="date">Date</span>
+                    </div>
+                    <div class="notification-item__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque vitae, commodi quisquam in
+                        obcaecati praesentium
+                        ... <span class="seeMore">See More</span>
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-item__header">
+                        <span class="title">Title</span>
+                        <span class="date">Date</span>
+                    </div>
+                    <div class="notification-item__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque vitae, commodi quisquam in
+                        obcaecati praesentium
+                        ... <span class="seeMore">See More</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <i class="fi fi-rr-settings" nz-dropdown [nzDropdownMenu]="settingMenu" nzTrigger="click"
+            [nzPlacement]="'bottomLeft'"></i>
+        <nz-dropdown-menu #settingMenu="nzDropdownMenu">
+            <ul nz-menu>
+                <li nz-menu-item>Company Policy</li>
+                <li nz-menu-item (click)="logOut()">Log Out</li>
+            </ul>
+        </nz-dropdown-menu>
+    </div>
+</div>

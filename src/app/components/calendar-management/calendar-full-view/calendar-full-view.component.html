@@ -1,0 +1,27 @@
+<nz-calendar>
+    <div *nzDateFullCell="let date">
+        @if(todayDate.getFullYear()=== date.getFullYear()
+        && todayDate.getMonth()===date.getMonth()
+        && todayDate.getDate()===date.getDate()){
+            <div class="ant-fullcalendar-date asd">
+                <div class="ant-fullcalendar-value">{{ date.getDate() }}</div>
+            </div>
+        } @else {
+            <div class="ant-fullcalendar-date asd">
+                <div class="ant-fullcalendar-value">{{ date.getDate() }}</div>
+            </div>
+        }
+    </div>
+    <ng-container *nzMonthCell="let month">
+        @if (getMonthData(month); as monthData) {
+        <div class="notes-month">
+            <section>{{ monthData }}</section>
+            <span>Backlog number</span>
+        </div>
+        }
+    </ng-container>
+</nz-calendar>
+
+
+<div class="date">
+</div>

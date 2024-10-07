@@ -1,0 +1,78 @@
+<div class="main-card-wrapper">
+    <div>
+        <h4 nz-typography>Leave Type List</h4>
+        <p nz-typography nzType="secondary">Organize leaveTypes and manage prefix IDs for staff efficiently.</p>
+    </div>
+    <div>
+        <button nz-button nzType="primary" (click)="createLeaveType()">Create
+            Leave Type</button>
+    </div>
+    <nz-spin nzTip="Loading..." [nzSpinning]="leaveTypeLoading">
+        <nz-table #leaveTypeList [nzData]="leaveTypeListData" [nzScroll]="{x: '900px'}">
+            <thead>
+                <tr>
+                    <th nzWidth="250px">LeaveType Name</th>
+                    <th nzWidth="350px">Description</th>
+                    <th nzWidth="200px">Allow Days Per Year</th>
+                    <th nzWidth="100px" nzRight></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let leaveType of leaveTypeList.data">
+                    <td>{{ leaveType.name }}</td>
+                    <td>{{ leaveType.description }}</td>
+                    <td>{{ leaveType.allowDaysPerYear }}</td>
+                    <td nzRight>
+                        <div class="table-action-wrapper">
+                            <i class="fi fi-rr-edit" (click)="editLeaveType(leaveType)"></i>
+                            <i class="fi fi-rr-trash" (click)="deleteLeaveType(leaveType)"></i>
+                            <i class="fi fi-rr-info" (click)="viewDetailsLeaveType(leaveType)"></i>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </nz-spin>
+</div>
+
+<nz-modal [(nzVisible)]="createEditLeaveTypeModal"
+    [nzTitle]="createEditState == 'create' ? 'Leave Type Create' : 'Leave Type Edit'" (nzOnCancel)="closeModal()"
+    (nzOnOk)="closeModal()" [nzFooter]="createModalFooter">
+    <ng-container *nzModalContent>
+        <form nz-form [nzLayout]="'vertical'" [formGroup]="leaveTypeForm">
+            <nz-form-item>
+                <nz-form-label nzFor="name">Leave Type Name</nz-form-label>
+                <nz-form-control nzErrorTip="Please fill name for Leave Type!">
+                    <input nz-input type="text" placeholder="eg. Annual Leave" formControlName="name">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="name"> Description</nz-form-label>
+                <nz-form-control>
+                    <textarea nz-input type="text" placeholder="description" formControlName="description"></textarea>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="name">Allow Days Per Year</nz-form-label>
+                <nz-form-control>
+                    <input nz-input type="number" placeholder="0" formControlName="allowDaysPerYear">
+                </nz-form-control>
+            </nz-form-item>
+        </form>
+    </ng-container>
+    <ng-template #createModalFooter>
+        <button nz-button nzType="default" (click)="closeModal()" [disabled]="leaveTypeLoading">Cancel</button>
+        <button nz-button nzType="primary" (click)="createEditLeaveTypeConfirm()"
+            [nzLoading]="leaveTypeLoading">{{createEditState==='create'?'Create':'Update'}}</button>
+    </ng-template>
+</nz-modal>
+
+<nz-modal [(nzVisible)]="detailsLeaveTypeModal" [nzTitle]="'Role Details'" (nzOnCancel)="closeModal()"
+    (nzOnOk)="closeModal()">
+    <ng-container *nzModalContent>
+        <app-modal-details-content [detailsObj]="selectedLeaveTypeObj"></app-modal-details-content>
+    </ng-container>
+    <ng-container *nzModalFooter>
+        <button nz-button nzType="default" (click)="closeModal()">close</button>
+    </ng-container>
+</nz-modal>

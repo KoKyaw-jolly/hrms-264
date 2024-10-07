@@ -1,0 +1,19 @@
+@import'../../../../tokens/build/scss/variables.scss';
+
+.modal-content-list{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    .content-row{
+        display: flex;
+        gap: $spacing-md;
+        .title {
+          font-weight: bold;
+          width: 100px;
+        }
+        .description {
+          flex: 1;
+        }
+    }
+}

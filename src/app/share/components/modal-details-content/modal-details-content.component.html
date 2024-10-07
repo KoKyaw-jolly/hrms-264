@@ -1,0 +1,14 @@
+<div class="modal-content-list">
+    <div *ngFor="let item of contentObject; let i = index" class="content-row">
+      <span class="title">{{ item.name }}</span>
+      <span>:</span>
+      <span class="description">
+        <ng-container *ngIf="item.type === 'array'; else stringTemplate">
+          <ng-container *ngFor="let subItem of item.label; let j = index">
+            <nz-tag nzColor="success">{{ subItem }}</nz-tag>
+          </ng-container>
+        </ng-container>
+        <ng-template #stringTemplate>{{ item.label }}</ng-template>
+      </span>
+    </div>
+  </div>

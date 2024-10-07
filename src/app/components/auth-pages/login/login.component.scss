@@ -1,0 +1,64 @@
+@import "../../../../tokens/build/scss/variables.scss";
+@import "../../../../assets/styles/variables.scss";
+
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $padding-xxl;
+
+  .login-container {
+    max-width: max-content;
+    border-radius: $border-radius-xl;
+    box-shadow: $card-box-shadow;
+    display: flex;
+  }
+
+  .login-container-left-horizontal {
+    display: none;
+  }
+  .login-container-left-vertical {
+    display: block;
+    max-width: 300px;
+    border-radius: $border-radius-xl 0 0 $border-radius-xl;
+  }
+
+  .login-container-right {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing-xl;
+    padding: $padding-xl;
+
+    .heading-wrapper {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      padding: 0 $padding-md;
+      border-left: 5px solid $primary-color;
+
+      h3 {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .login-wrapper .login-container {
+    flex-direction: column;
+
+    .login-container-left-vertical {
+      display: none;
+    }
+    .login-container-left-horizontal {
+      display: block;
+      border-radius: $border-radius-xl $border-radius-xl 0 0;
+      height: 80px;
+    }
+  }
+}

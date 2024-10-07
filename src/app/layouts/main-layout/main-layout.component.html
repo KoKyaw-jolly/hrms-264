@@ -1,0 +1,45 @@
+<div class="main-layout">
+    <div class="main-layout__sidebar" [class.menuCollapsed]="menuCollapsed">
+        <span class="menu-collapse" (click)="menuCollapsed = !menuCollapsed">
+            <i [ngClass]="menuCollapsed ? 'fi fi-rr-arrow-small-right':'fi fi-rr-arrow-small-left'"></i>
+        </span>
+        <div class="main-layout__sidebar-header">
+            <img class="logo" [src]="images.HRMS_LOGO" alt="">
+            <span class="header">HRMS264</span>
+        </div>
+        <ul nz-menu nzMode="inline" [nzInlineCollapsed]="menuCollapsed">
+            @for(menu of sideMenuList; track menu.id){
+            @if(menu.sibmenuItems && menu.sibmenuItems.length > 0){
+            <li nz-submenu [nzTitle]="master">
+                <ng-template #master>
+                    <div class="menu-item">
+                        <i [class]="menu.icon"></i>
+                        <span class="menu-name">{{menu.name}}</span>
+                    </div>
+                </ng-template>
+                <ul>
+                    @for (subMenuItem of menu.sibmenuItems; track $index) {
+                    <li nz-menu-item nzMatchRouter [routerLink]="subMenuItem.routelink">{{subMenuItem.name}}</li>
+                    }
+                </ul>
+            </li>
+            } @else {
+            <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="menuCollapsed ? menu.name : ''"
+                nzMatchRouter [routerLink]="menu.routelink">
+                <div class="menu-item">
+                    <i [class]="menu.icon"></i>
+                    <span class="menu-name">{{menu.name}}</span>
+                </div>
+            </li>
+            }
+            }
+        </ul>
+    </div>
+    <div class="main-layout__body" [class.menuCollapsed]="menuCollapsed">
+        <app-header></app-header>
+        <div class="main-layout__body-content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="main-layout__body-footer"></div>
+    </div>
+</div>

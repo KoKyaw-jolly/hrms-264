@@ -1,0 +1,37 @@
+{
+    "source": ["src/tokens/**/*.json"],
+    "platforms": {
+      "scss": {
+        "transformGroup": "scss",
+        "buildPath": "src/tokens/build/scss/",
+        "files": [
+          {
+            "destination": "variables.scss",
+            "format": "scss/variables"
+          }
+        ],
+        "transforms": ["size/px"]
+      },
+      "less": {
+        "transformGroup": "less",
+        "buildPath": "src/tokens/build/less/",
+        "files": [
+          {
+            "destination": "variables.less",
+            "format": "less/variables"
+          }
+        ],
+        "transforms": ["size/px"]
+      },
+      "json": {
+        "transformGroup": "web",
+        "buildPath": "src/tokens/build/json/",
+        "files": [
+          {
+            "destination": "tokens.json",
+            "format": "json"
+          }
+        ]
+      }
+    }
+  }

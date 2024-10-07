@@ -1,0 +1,77 @@
+<div class="main-card-wrapper">
+    <div><h4 nz-typography>Department List</h4>
+        <p nz-typography nzType="secondary">Organize departments and manage prefix IDs for staff efficiently.</p>        
+    </div>
+    <div>
+        <button nz-button nzType="primary" (click)="createDepartment()">Create
+            Department</button>
+    </div>
+    <nz-spin nzTip="Loading..." [nzSpinning]="departmentLoading">
+        <nz-table #departmentList [nzData]="departmentListData" [nzScroll]="{x: '900px'}">
+            <thead>
+                <tr>
+                    <th nzWidth="170px">Department Prefix ID</th>
+                    <th nzWidth="250px">Department Name</th>
+                    <th nzWidth="380px">Description</th>
+                    <th nzWidth="100px" nzRight></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let department of departmentList.data">
+                    <td>
+                        <nz-tag nzColor="success">{{ department.prefixID }}</nz-tag>
+                    </td>
+                    <td>{{ department.name }}</td>
+                    <td>{{ department.description }}</td>
+                    <td nzRight>
+                        <div class="table-action-wrapper">
+                            <i class="fi fi-rr-edit" (click)="editDepartment(department)"></i>
+                            <i class="fi fi-rr-trash" (click)="deleteDepartment(department)"></i>
+                            <i class="fi fi-rr-info" (click)="viewDetailsDepartment(department)"></i>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </nz-spin>
+</div>
+
+<nz-modal [(nzVisible)]="createEditDepartmentModal" [nzTitle]="createEditState == 'create' ? 'Department Create' : 'Department Edit'"
+    (nzOnCancel)="closeModal()" (nzOnOk)="closeModal()" [nzFooter]="createModalFooter">
+    <ng-container *nzModalContent>
+        <form nz-form [nzLayout]="'vertical'" [formGroup]="departmentForm">
+            <nz-form-item>
+                <nz-form-label nzFor="name">Department Prefix ID</nz-form-label>
+                <nz-form-control nzErrorTip="Please fill name for Department Prefix ID!">
+                    <input nz-input type="text" placeholder="eg. HRD" formControlName="prefixID">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="name">Department Name</nz-form-label>
+                <nz-form-control nzErrorTip="Please fill name for Department!">
+                    <input nz-input type="text" placeholder="eg. Human Resource Department" formControlName="name">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="name"> Description</nz-form-label>
+                <nz-form-control>
+                    <textarea nz-input type="text" placeholder="description"
+                        formControlName="description"></textarea>
+                </nz-form-control>
+            </nz-form-item>
+        </form>
+    </ng-container>
+    <ng-template #createModalFooter>
+        <button nz-button nzType="default" (click)="closeModal()" [disabled]="departmentLoading">Cancel</button>
+        <button nz-button nzType="primary" (click)="createEditDepartmentConfirm()" [nzLoading]="departmentLoading">{{createEditState==='create'?'Create':'Update'}}</button>
+    </ng-template>
+</nz-modal>
+
+<nz-modal [(nzVisible)]="detailsDepartmentModal" [nzTitle]="'Role Details'" (nzOnCancel)="closeModal()" (nzOnOk)="closeModal()">
+    <ng-container *nzModalContent>
+        <app-modal-details-content [detailsObj]="selectedDepartmentObj"></app-modal-details-content>
+    </ng-container>
+    <ng-container *nzModalFooter>
+        <button nz-button nzType="default" (click)="closeModal()">close</button>
+    </ng-container>
+</nz-modal>

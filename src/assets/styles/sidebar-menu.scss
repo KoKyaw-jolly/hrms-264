@@ -1,0 +1,59 @@
+@import '../../tokens/build/scss/variables.scss';
+
+.side-menu-wrapper {
+  max-width: 240px;
+}
+
+::ng-deep {
+  .ant-menu-inline,
+  .ant-menu-vertical,
+  .ant-menu-vertical-left {
+    border: none;
+  }
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    padding: $menu-item-padding-vertical $menu-item-padding-horizontal !important;
+    margin: $menu-item-margin-vertical $menu-item-margin-horizontal !important;
+    width: auto !important;
+    height: $menu-item-height !important;
+    border-radius: $menu-border-radius;
+  }
+
+  .ant-menu-inline .ant-menu-selected::after,
+  .ant-menu-inline .ant-menu-item-selected::after {
+    display: none;
+  }
+
+  .ant-menu-sub.ant-menu-inline .ant-menu-item-group-title {
+    padding-left: 56px;
+    color: gray;
+    font-size: 12px;
+  }
+
+  // .ant-menu-inline .ant-menu-item
+  .ant-menu-sub.ant-menu-inline .ant-menu-item {
+    margin-left: $menu-inline-item-margin-left !important;
+  }
+
+  .ant-menu-vertical .ant-menu-item {
+    line-height: $menu-vertical-item-line-height !important;
+  }
+
+  .menu-item{
+    display: flex;
+    gap: $spacing-xs;
+    align-items: center;
+    height: 32px;
+
+    i{
+      font-size: 16px;
+    }
+  }
+  .ant-menu-inline-collapsed .menu-item .menu-name{
+    display: none;
+  }
+
+  .ant-menu-submenu-arrow{
+    transition: all 0.15s;
+  }
+}

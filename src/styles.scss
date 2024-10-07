@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../node_modules/@flaticon/flaticon-uicons/css/regular/rounded.css";
+@import "assets/styles/fonts-style.scss";
+@import "assets/styles/sidebar-menu.scss";
+@import "assets/styles/layout.scss";
+@import "assets/styles/variables.scss";
+@import "tokens/build/scss/variables.scss";
+
+//flaticon
+
+i.fi,
+span.fi {
+  display: flex;
+}
+
+//reboot
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0 !important;
+}
+p {
+  margin: 0 !important;
+}
+
+//table
+.table-action-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $padding-sm;
+
+  i {
+    color: $text-color-secondary;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+}
+
+//modal
+
+.delete-modal-content {
+  padding: 10px 20px 0px 20px;
+  display: flex;
+  gap: 15px;
+  .delete-icon{
+    font-size: 20px;
+    height: 20px;
+    color: $primary-color;
+  }
+}
