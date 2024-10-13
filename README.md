@@ -30,7 +30,7 @@ To run and test this project, follow the steps below:
 
 3. **Set Up Mockoon**:
    - Download and install **Mockoon** (if not installed).
-   - Use the `database.json` file located under `src/assets/data/database.json`.
+   - Use the `mockoon.json` file located under `src/assets/data/mockoon.json`.
    - Create a **Mockoon** environment using this file, and set the server port to `3200`.
 
 4. **Run the Project**:
@@ -50,7 +50,7 @@ To run and test this project, follow the steps below:
 
 ## Live Demo:
 
-You can test the system using the provided credentials. The application includes features like employee management, leave tracking, and payroll setup.
+You can test the system using the provided credentials. The application includes features like employee management, leave tracking, attendance record and payroll setup.
 
 ---
 
