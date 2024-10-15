@@ -1,0 +1,70 @@
+<div class="main-card-wrapper">
+    <div>
+        <h4 nz-typography>Staff List</h4>
+        <p nz-typography nzType="secondary">Manage data for all staff.</p>
+    </div>
+    <div class="list-style-wrapper">
+        <span class="list-style-icon" [class.active]="listStyle==='card'" (click)="listStyle='card'">
+            <i class="fi fi-rr-rectangles-mixed"></i>
+        </span>
+        <span class="list-style-icon" [class.active]="listStyle==='vertical '" (click)="listStyle='vertical'">
+            <i class="fi fi-rr-list"></i>
+        </span>
+    </div>
+    <nz-spin nzTip="Loading..." [nzSpinning]="staffLoading">
+        <div [ngClass]="{'card-list-wrapper': listStyle === 'card', 'vertical-list-wrapper': listStyle === 'vertical'}">
+            @for(staff of staffList; track staff.id) {
+            <div class="card-wrapper" *ngIf="listStyle==='card'">
+                <!-- <img [src]="staff.image" alt=""> -->
+                <div class="top-wrapper">
+                    <div class="img-wrapper">
+                        <img [src]="staff.image" alt="">
+                    </div>
+                    <span class="dropdown-wrapper">
+                        <i class="fi fi-rr-menu-dots-vertical" nz-dropdown [nzDropdownMenu]="menu"></i>
+                        <nz-dropdown-menu #menu="nzDropdownMenu">
+                            <ul nz-menu>
+                                <li nz-menu-item (click)="editStaff(staff.id)">Edit</li>
+                                <li nz-menu-item (click)="deleteStaff(staff)">Delete</li>
+                            </ul>
+                        </nz-dropdown-menu>
+                    </span>
+                </div>
+                <div class="info-wrapper">
+                    <span class="name" [class.active]="true">{{staff.fullName}}</span>
+                    <span class="position">{{getPositionName(staff.positionId)}}</span>
+                    <span class="department">{{getDepartmentName(staff.departmentId)}}</span>
+                </div>
+                <span class="contact-wrapper">
+                    <span class="item"><i class="fi fi-rr-phone-call"></i></span>
+                    <span class="item"><i class="fi fi-rr-envelope"></i></span>
+                    <span class="item" (click)="detailsStaff(staff)"><i class="fi fi-rr-info"></i></span>
+                </span>
+            </div>
+            <div class="card-wrapper" *ngIf="listStyle==='vertical'">
+                <img [src]="staff.image" alt="">
+                <div class="info-wrapper">
+                    <span class="name" [class.active]="true">{{staff.fullName}}</span>
+                    <span class="position">{{getPositionName(staff.positionId)}}</span>
+                </div>
+                <div class="department">{{getDepartmentName(staff.departmentId)}}</div>
+                <div class="phone">{{staff.phone}}</div>
+                <div class="email">{{staff.email}}</div>
+                <span class="actions-wrapper">
+                    <span class="item"><i class="fi fi-rr-edit" (click)="editStaff(staff.id)"></i></span>
+                    <span class="item"><i class="fi fi-rr-trash" (click)="deleteStaff(staff)"></i></span>
+                    <span class="item"><i class="fi fi-rr-info" (click)="detailsStaff(staff)"></i></span>
+                </span>
+            </div>
+            }
+        </div>
+    </nz-spin>
+</div>
+<nz-modal [(nzVisible)]="detailsStaffModal" [nzTitle]="'Role Details'" (nzOnCancel)="closeModal()" (nzOnOk)="closeModal()">
+    <ng-container *nzModalContent>
+        <app-modal-details-content [detailsObj]="selectedStaffObj"></app-modal-details-content>
+    </ng-container>
+    <ng-container *nzModalFooter>
+        <button nz-button nzType="default" (click)="closeModal()">close</button>
+    </ng-container>
+</nz-modal>

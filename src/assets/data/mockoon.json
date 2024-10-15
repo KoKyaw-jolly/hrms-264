@@ -8,28 +8,6 @@
   "hostname": "",
   "folders": [
     {
-      "uuid": "d3b27403-cadf-4109-8f87-f581f0d9bdaa",
-      "name": "staff",
-      "children": [
-        {
-          "type": "route",
-          "uuid": "2419b69c-3ab9-455a-9691-b9d4f1f3db5a"
-        },
-        {
-          "type": "route",
-          "uuid": "527f7051-ddef-4dc2-b4a6-186ee7f1e61b"
-        },
-        {
-          "type": "route",
-          "uuid": "149e7750-3b59-489a-9449-f9cdc28c3c17"
-        },
-        {
-          "type": "route",
-          "uuid": "4c657e94-8faa-438b-846a-97817f35f925"
-        }
-      ]
-    },
-    {
       "uuid": "97540ec0-9954-4ad0-adc3-f0f894b52e72",
       "name": "auth",
       "children": [
@@ -53,7 +31,7 @@
         },
         {
           "type": "route",
-          "uuid": "54bb95c8-5205-4c7a-a75d-f9d5dab5a768"
+          "uuid": "e39f44bf-f830-4918-beeb-a7005ca87ed6"
         },
         {
           "type": "route",
@@ -93,7 +71,7 @@
     },
     {
       "uuid": "67c0bef2-f3f0-4b5a-8c61-0bf014a664f3",
-      "name": "general-setting",
+      "name": "general-setting-old",
       "children": [
         {
           "type": "route",
@@ -208,6 +186,60 @@
           "uuid": "5ff7cbb5-4bf5-432e-bd7c-7fae0e95b78f"
         }
       ]
+    },
+    {
+      "uuid": "87735f85-0366-40a5-9136-cd3c54b2e1ad",
+      "name": "master",
+      "children": [
+        {
+          "type": "folder",
+          "uuid": "37e4a331-1eef-4c05-8f6b-f98e2cac2558"
+        },
+        {
+          "type": "folder",
+          "uuid": "ac149b0e-f059-421f-ab84-11cfb806639d"
+        },
+        {
+          "type": "folder",
+          "uuid": "8f48bf4d-de62-4792-89d5-0e8227e6e474"
+        },
+        {
+          "type": "folder",
+          "uuid": "bbeedf28-43d8-4498-8786-288df05d81b4"
+        }
+      ]
+    },
+    {
+      "uuid": "816f70b4-2dd8-4bb6-8223-14bc9dc4b900",
+      "name": "general-setting",
+      "children": [
+        {
+          "type": "folder",
+          "uuid": "5499097f-075b-42c9-9303-8803239a7e56"
+        }
+      ]
+    },
+    {
+      "uuid": "bc7910bf-807a-4f0e-b1f2-67ebf3624a6e",
+      "name": "staff-management",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "2419b69c-3ab9-455a-9691-b9d4f1f3db5a"
+        },
+        {
+          "type": "route",
+          "uuid": "2c8ba3fd-71b5-4faf-86f4-397278c044e4"
+        },
+        {
+          "type": "route",
+          "uuid": "d6f9ddd6-3700-462c-9106-9440ece2af13"
+        },
+        {
+          "type": "route",
+          "uuid": "f61735a5-3e19-4799-b522-d7930789dd00"
+        }
+      ]
     }
   ],
   "routes": [
@@ -220,7 +252,7 @@
       "responses": [
         {
           "uuid": "b3a5f84b-2091-4e45-964a-46818984563b",
-          "body": "[\n    {\n        \"staffId\": 1,\n        \"fullName\": \"John Doe\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"john.doe@example.com\",\n        \"phone\": \"123-456-7890\",\n        \"address\": \"123 Main St, Cityville, CA 12345\",\n        \"position\": \"Software Engineer\",\n        \"department\": \"Engineering\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 15,\n                \"remainingDays\": 10\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 5\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 8\n            }\n        ]\n    },\n    {\n        \"staffId\": 2,\n        \"fullName\": \"Jane Smith\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"jane.smith@example.com\",\n        \"phone\": \"123-456-7891\",\n        \"address\": \"456 Elm St, Townsville, CA 12345\",\n        \"position\": \"Marketing Manager\",\n        \"department\": \"Marketing\",\n        \"role\": \"Admin\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 20,\n                \"remainingDays\": 15\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 2\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 12,\n                \"remainingDays\": 10\n            }\n        ]\n    },\n    {\n        \"staffId\": 3,\n        \"fullName\": \"Alice Johnson\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"alice.johnson@example.com\",\n        \"phone\": \"123-456-7892\",\n        \"address\": \"789 Oak St, Villagetown, CA 12345\",\n        \"position\": \"HR Specialist\",\n        \"department\": \"Human Resources\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 18,\n                \"remainingDays\": 12\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 3,\n                \"remainingDays\": 1\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 15,\n                \"remainingDays\": 13\n            }\n        ]\n    },\n    {\n        \"staffId\": 4,\n        \"fullName\": \"Bob Brown\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"bob.brown@example.com\",\n        \"phone\": \"123-456-7893\",\n        \"address\": \"123 Pine St, Smalltown, CA 12345\",\n        \"position\": \"Finance Manager\",\n        \"department\": \"Finance\",\n        \"role\": \"Admin\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 25,\n                \"remainingDays\": 20\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 3\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 7\n            }\n        ]\n    },\n    {\n        \"staffId\": 5,\n        \"fullName\": \"Chris Green\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"chris.green@example.com\",\n        \"phone\": \"123-456-7894\",\n        \"address\": \"456 Maple St, Uptown, CA 12345\",\n        \"position\": \"Product Manager\",\n        \"department\": \"Product\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 20,\n                \"remainingDays\": 15\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 4,\n                \"remainingDays\": 4\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 8,\n                \"remainingDays\": 6\n            }\n        ]\n    },\n    {\n        \"staffId\": 6,\n        \"fullName\": \"Dana White\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"dana.white@example.com\",\n        \"phone\": \"123-456-7895\",\n        \"address\": \"789 Birch St, Downtown, CA 12345\",\n        \"position\": \"Operations Manager\",\n        \"department\": \"Operations\",\n        \"role\": \"Admin\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 18,\n                \"remainingDays\": 14\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 6,\n                \"remainingDays\": 4\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 8\n            }\n        ]\n    },\n    {\n        \"staffId\": 7,\n        \"fullName\": \"Eve Black\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"eve.black@example.com\",\n        \"phone\": \"123-456-7896\",\n        \"address\": \"123 Cedar St, Midtown, CA 12345\",\n        \"position\": \"Sales Executive\",\n        \"department\": \"Sales\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 15,\n                \"remainingDays\": 10\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 3\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 12,\n                \"remainingDays\": 11\n            }\n        ]\n    },\n    {\n        \"staffId\": 8,\n        \"fullName\": \"Frank Brown\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"frank.brown@example.com\",\n        \"phone\": \"123-456-7897\",\n        \"address\": \"456 Elm St, Townsville, CA 12345\",\n        \"position\": \"Engineering Manager\",\n        \"department\": \"Engineering\",\n        \"role\": \"Admin\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 22,\n                \"remainingDays\": 18\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 4,\n                \"remainingDays\": 2\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 9\n            }\n        ]\n    },\n    {\n        \"staffId\": 9,\n        \"fullName\": \"Grace Blue\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"grace.blue@example.com\",\n        \"phone\": \"123-456-7898\",\n        \"address\": \"789 Oak St, Villagetown, CA 12345\",\n        \"position\": \"Designer\",\n        \"department\": \"Design\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 18,\n                \"remainingDays\": 12\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 6,\n                \"remainingDays\": 4\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 8\n            }\n        ]\n    },\n    {\n        \"staffId\": 10,\n        \"fullName\": \"Henry Gray\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"henry.gray@example.com\",\n        \"phone\": \"123-456-7899\",\n        \"address\": \"123 Pine St, Smalltown, CA 12345\",\n        \"position\": \"QA Engineer\",\n        \"department\": \"Quality Assurance\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 20,\n                \"remainingDays\": 16\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 4,\n                \"remainingDays\": 4\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 8,\n                \"remainingDays\": 6\n            }\n        ]\n    },\n    {\n        \"staffId\": 11,\n        \"fullName\": \"Ivy Orange\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"ivy.orange@example.com\",\n        \"phone\": \"123-456-7800\",\n        \"address\": \"456 Maple St, Uptown, CA 12345\",\n        \"position\": \"Support Engineer\",\n        \"department\": \"Support\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 15,\n                \"remainingDays\": 12\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 5\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 8\n            }\n        ]\n    },\n    {\n        \"staffId\": 12,\n        \"fullName\": \"Jack Yellow\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"jack.yellow@example.com\",\n        \"phone\": \"123-456-7801\",\n        \"address\": \"789 Birch St, Downtown, CA 12345\",\n        \"position\": \"Network Administrator\",\n        \"department\": \"IT\",\n        \"role\": \"Admin\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 20,\n                \"remainingDays\": 15\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 3\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 12,\n                \"remainingDays\": 10\n            }\n        ]\n    },\n    {\n        \"staffId\": 13,\n        \"fullName\": \"Kevin White\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"kevin.white@example.com\",\n        \"phone\": \"123-456-7802\",\n        \"address\": \"123 Cedar St, Midtown, CA 12345\",\n        \"position\": \"Data Analyst\",\n        \"department\": \"Data\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 15,\n                \"remainingDays\": 10\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 4,\n                \"remainingDays\": 4\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 9\n            }\n        ]\n    },\n    {\n        \"staffId\": 14,\n        \"fullName\": \"Lily Green\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"lily.green@example.com\",\n        \"phone\": \"123-456-7803\",\n        \"address\": \"456 Oak St, Villagetown, CA 12345\",\n        \"position\": \"UX Designer\",\n        \"department\": \"Design\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 18,\n                \"remainingDays\": 14\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 5\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 8,\n                \"remainingDays\": 6\n            }\n        ]\n    },\n    {\n        \"staffId\": 15,\n        \"fullName\": \"Mike Brown\",\n        \"image\": \"sample.png\",\n        \"gender\": \"male\",\n        \"email\": \"mike.brown@example.com\",\n        \"phone\": \"123-456-7804\",\n        \"address\": \"789 Pine St, Smalltown, CA 12345\",\n        \"position\": \"Backend Developer\",\n        \"department\": \"Engineering\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 20,\n                \"remainingDays\": 17\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 2\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 9\n            }\n        ]\n    }\n]",
+          "body": "[\n    {\n        \"id\": \"1\",\n        \"staffId\": \"S01\",\n        \"fullName\": \"Chris Martin\",\n        \"image\": \"https://randomuser.me/api/portraits/women/33.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"2001-07-01\",\n        \"positionId\": \"8\",\n        \"departmentId\": \"7\",\n        \"roleId\": \"2\",\n        \"email\": \"s01@company.com\",\n        \"phone\": \"+1-583-6319\",\n        \"address\": \"808 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 9\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 15,\n                \"leaveRemaining\": 15\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"2\",\n        \"staffId\": \"S02\",\n        \"fullName\": \"Robert Harris\",\n        \"image\": \"https://randomuser.me/api/portraits/women/76.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"2002-03-15\",\n        \"positionId\": \"15\",\n        \"departmentId\": \"3\",\n        \"roleId\": \"1\",\n        \"email\": \"s02@company.com\",\n        \"phone\": \"+1-122-516\",\n        \"address\": \"666 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 8,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 12,\n                \"leaveRemaining\": 9\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 0\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"3\",\n        \"staffId\": \"S03\",\n        \"fullName\": \"Nicholas Taylor\",\n        \"image\": \"https://randomuser.me/api/portraits/men/71.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1996-05-01\",\n        \"positionId\": \"6\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s03@company.com\",\n        \"phone\": \"+1-324-7630\",\n        \"address\": \"976 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 13,\n                \"leaveRemaining\": 12\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 0\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"4\",\n        \"staffId\": \"S04\",\n        \"fullName\": \"Ashley Hernandez\",\n        \"image\": \"https://randomuser.me/api/portraits/men/65.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1969-07-21\",\n        \"positionId\": \"15\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"1\",\n        \"email\": \"s04@company.com\",\n        \"phone\": \"+1-410-4755\",\n        \"address\": \"602 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 7,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 12,\n                \"leaveRemaining\": 14\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"5\",\n        \"staffId\": \"S05\",\n        \"fullName\": \"Michelle Garcia\",\n        \"image\": \"https://randomuser.me/api/portraits/men/71.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1967-03-11\",\n        \"positionId\": \"12\",\n        \"departmentId\": \"7\",\n        \"roleId\": \"3\",\n        \"email\": \"s05@company.com\",\n        \"phone\": \"+1-855-6239\",\n        \"address\": \"89 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 7,\n                \"leaveRemaining\": 0\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"6\",\n        \"staffId\": \"S06\",\n        \"fullName\": \"Ashley Smith\",\n        \"image\": \"https://randomuser.me/api/portraits/men/6.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1992-12-12\",\n        \"positionId\": \"12\",\n        \"departmentId\": \"7\",\n        \"roleId\": \"3\",\n        \"email\": \"s06@company.com\",\n        \"phone\": \"+1-707-9572\",\n        \"address\": \"404 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 10,\n                \"leaveRemaining\": 8\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 8\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"7\",\n        \"staffId\": \"S07\",\n        \"fullName\": \"Brian Lopez\",\n        \"image\": \"https://randomuser.me/api/portraits/men/59.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1965-12-23\",\n        \"positionId\": \"5\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"3\",\n        \"email\": \"s07@company.com\",\n        \"phone\": \"+1-723-193\",\n        \"address\": \"393 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 8,\n                \"leaveRemaining\": 8\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 6,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"8\",\n        \"staffId\": \"S08\",\n        \"fullName\": \"Brian Anderson\",\n        \"image\": \"https://randomuser.me/api/portraits/men/46.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1988-03-13\",\n        \"positionId\": \"6\",\n        \"departmentId\": \"1\",\n        \"roleId\": \"3\",\n        \"email\": \"s08@company.com\",\n        \"phone\": \"+1-653-5525\",\n        \"address\": \"470 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 9,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 7,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"9\",\n        \"staffId\": \"S09\",\n        \"fullName\": \"Rebecca Jackson\",\n        \"image\": \"https://randomuser.me/api/portraits/men/5.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1969-01-10\",\n        \"positionId\": \"11\",\n        \"departmentId\": \"1\",\n        \"roleId\": \"1\",\n        \"email\": \"s09@company.com\",\n        \"phone\": \"+1-988-373\",\n        \"address\": \"464 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 6\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 7,\n                \"leaveRemaining\": 7\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"10\",\n        \"staffId\": \"S10\",\n        \"fullName\": \"Linda Williams\",\n        \"image\": \"https://randomuser.me/api/portraits/women/21.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1995-05-04\",\n        \"positionId\": \"9\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s10@company.com\",\n        \"phone\": \"+1-379-4924\",\n        \"address\": \"466 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 15,\n                \"leaveRemaining\": 12\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"11\",\n        \"staffId\": \"S11\",\n        \"fullName\": \"Laura Clark\",\n        \"image\": \"https://randomuser.me/api/portraits/women/34.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"2001-11-28\",\n        \"positionId\": \"5\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"3\",\n        \"email\": \"s11@company.com\",\n        \"phone\": \"+1-314-7172\",\n        \"address\": \"837 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 7\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"12\",\n        \"staffId\": \"S12\",\n        \"fullName\": \"Tyler Moore\",\n        \"image\": \"https://randomuser.me/api/portraits/men/70.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1969-06-15\",\n        \"positionId\": \"4\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"3\",\n        \"email\": \"s12@company.com\",\n        \"phone\": \"+1-628-7486\",\n        \"address\": \"229 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 8,\n                \"leaveRemaining\": 0\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"13\",\n        \"staffId\": \"S13\",\n        \"fullName\": \"Jane Harris\",\n        \"image\": \"https://randomuser.me/api/portraits/men/17.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1997-04-09\",\n        \"positionId\": \"15\",\n        \"departmentId\": \"1\",\n        \"roleId\": \"2\",\n        \"email\": \"s13@company.com\",\n        \"phone\": \"+1-172-1352\",\n        \"address\": \"318 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 8\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 13,\n                \"leaveRemaining\": 7\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"14\",\n        \"staffId\": \"S14\",\n        \"fullName\": \"Justin Martin\",\n        \"image\": \"https://randomuser.me/api/portraits/men/22.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1969-08-25\",\n        \"positionId\": \"14\",\n        \"departmentId\": \"7\",\n        \"roleId\": \"3\",\n        \"email\": \"s14@company.com\",\n        \"phone\": \"+1-737-8437\",\n        \"address\": \"39 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 6,\n                \"leaveRemaining\": 7\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 11,\n                \"leaveRemaining\": 12\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"15\",\n        \"staffId\": \"S15\",\n        \"fullName\": \"Samantha Brown\",\n        \"image\": \"https://randomuser.me/api/portraits/men/38.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1984-03-04\",\n        \"positionId\": \"8\",\n        \"departmentId\": \"1\",\n        \"roleId\": \"2\",\n        \"email\": \"s15@company.com\",\n        \"phone\": \"+1-726-6691\",\n        \"address\": \"922 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 9\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"16\",\n        \"staffId\": \"S16\",\n        \"fullName\": \"Laura Miller\",\n        \"image\": \"https://randomuser.me/api/portraits/men/87.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"2002-06-18\",\n        \"positionId\": \"14\",\n        \"departmentId\": \"4\",\n        \"roleId\": \"3\",\n        \"email\": \"s16@company.com\",\n        \"phone\": \"+1-452-8854\",\n        \"address\": \"497 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 8,\n                \"leaveRemaining\": 7\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 14\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"17\",\n        \"staffId\": \"S17\",\n        \"fullName\": \"Hannah Jackson\",\n        \"image\": \"https://randomuser.me/api/portraits/women/35.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1972-09-25\",\n        \"positionId\": \"6\",\n        \"departmentId\": \"5\",\n        \"roleId\": \"3\",\n        \"email\": \"s17@company.com\",\n        \"phone\": \"+1-961-4282\",\n        \"address\": \"377 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 6\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"18\",\n        \"staffId\": \"S18\",\n        \"fullName\": \"Kevin Jackson\",\n        \"image\": \"https://randomuser.me/api/portraits/women/42.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"2005-01-11\",\n        \"positionId\": \"7\",\n        \"departmentId\": \"1\",\n        \"roleId\": \"2\",\n        \"email\": \"s18@company.com\",\n        \"phone\": \"+1-986-2513\",\n        \"address\": \"849 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"19\",\n        \"staffId\": \"S19\",\n        \"fullName\": \"Robert Lopez\",\n        \"image\": \"https://randomuser.me/api/portraits/men/73.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1982-10-27\",\n        \"positionId\": \"15\",\n        \"departmentId\": \"1\",\n        \"roleId\": \"2\",\n        \"email\": \"s19@company.com\",\n        \"phone\": \"+1-383-1865\",\n        \"address\": \"806 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 6\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 15\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"20\",\n        \"staffId\": \"S20\",\n        \"fullName\": \"James Davis\",\n        \"image\": \"https://randomuser.me/api/portraits/men/21.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"2001-08-08\",\n        \"positionId\": \"8\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s20@company.com\",\n        \"phone\": \"+1-347-2704\",\n        \"address\": \"762 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 12,\n                \"leaveRemaining\": 6\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"21\",\n        \"staffId\": \"S21\",\n        \"fullName\": \"Emily Miller\",\n        \"image\": \"https://randomuser.me/api/portraits/men/6.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"2005-07-25\",\n        \"positionId\": \"1\",\n        \"departmentId\": \"7\",\n        \"roleId\": \"2\",\n        \"email\": \"s21@company.com\",\n        \"phone\": \"+1-843-9874\",\n        \"address\": \"328 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 7,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 10,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"22\",\n        \"staffId\": \"S22\",\n        \"fullName\": \"Emily Rodriguez\",\n        \"image\": \"https://randomuser.me/api/portraits/women/80.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1971-11-22\",\n        \"positionId\": \"15\",\n        \"departmentId\": \"5\",\n        \"roleId\": \"3\",\n        \"email\": \"s22@company.com\",\n        \"phone\": \"+1-580-5929\",\n        \"address\": \"266 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 6,\n                \"leaveRemaining\": 6\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"23\",\n        \"staffId\": \"S23\",\n        \"fullName\": \"Ryan Rodriguez\",\n        \"image\": \"https://randomuser.me/api/portraits/women/97.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1986-09-11\",\n        \"positionId\": \"2\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"3\",\n        \"email\": \"s23@company.com\",\n        \"phone\": \"+1-758-5652\",\n        \"address\": \"964 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 9,\n                \"leaveRemaining\": 14\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"24\",\n        \"staffId\": \"S24\",\n        \"fullName\": \"Sarah Hernandez\",\n        \"image\": \"https://randomuser.me/api/portraits/women/70.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1979-05-12\",\n        \"positionId\": \"10\",\n        \"departmentId\": \"7\",\n        \"roleId\": \"3\",\n        \"email\": \"s24@company.com\",\n        \"phone\": \"+1-194-4115\",\n        \"address\": \"226 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 7\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 12,\n                \"leaveRemaining\": 13\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"25\",\n        \"staffId\": \"S25\",\n        \"fullName\": \"John Perez\",\n        \"image\": \"https://randomuser.me/api/portraits/women/38.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1973-02-10\",\n        \"positionId\": \"13\",\n        \"departmentId\": \"3\",\n        \"roleId\": \"2\",\n        \"email\": \"s25@company.com\",\n        \"phone\": \"+1-580-2626\",\n        \"address\": \"104 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 8,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"26\",\n        \"staffId\": \"S26\",\n        \"fullName\": \"Linda Brown\",\n        \"image\": \"https://randomuser.me/api/portraits/men/17.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1966-09-11\",\n        \"positionId\": \"4\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s26@company.com\",\n        \"phone\": \"+1-839-620\",\n        \"address\": \"799 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 6,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"27\",\n        \"staffId\": \"S27\",\n        \"fullName\": \"Tyler Lewis\",\n        \"image\": \"https://randomuser.me/api/portraits/women/33.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1971-11-24\",\n        \"positionId\": \"2\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"2\",\n        \"email\": \"s27@company.com\",\n        \"phone\": \"+1-927-7147\",\n        \"address\": \"563 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 14,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"28\",\n        \"staffId\": \"S28\",\n        \"fullName\": \"Robert Thomas\",\n        \"image\": \"https://randomuser.me/api/portraits/women/83.jpg\",\n        \"gender\": \"female\",\n        \"birthday\": \"1964-12-13\",\n        \"positionId\": \"7\",\n        \"departmentId\": \"5\",\n        \"roleId\": \"1\",\n        \"email\": \"s28@company.com\",\n        \"phone\": \"+1-163-5915\",\n        \"address\": \"594 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 1\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 11\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"29\",\n        \"staffId\": \"S29\",\n        \"fullName\": \"Katie Lee\",\n        \"image\": \"https://randomuser.me/api/portraits/women/30.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1984-12-26\",\n        \"positionId\": \"1\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s29@company.com\",\n        \"phone\": \"+1-424-8306\",\n        \"address\": \"915 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 10,\n                \"leaveRemaining\": 3\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 7,\n                \"leaveRemaining\": 8\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 2,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    },\n    {\n        \"id\": \"30\",\n        \"staffId\": \"S30\",\n        \"fullName\": \"Tyler Anderson\",\n        \"image\": \"https://randomuser.me/api/portraits/men/72.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1979-05-14\",\n        \"positionId\": \"15\",\n        \"departmentId\": \"6\",\n        \"roleId\": \"3\",\n        \"email\": \"s30@company.com\",\n        \"phone\": \"+1-381-3695\",\n        \"address\": \"50 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 2\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 11,\n                \"leaveRemaining\": 10\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 4,\n                \"leaveRemaining\": 4\n            },\n            {\n                \"leaveTypeId\": \"4\",\n                \"leaveBalance\": 0,\n                \"leaveTaken\": 0,\n                \"leaveRemaining\": 0\n            }\n        ]\n    }\n]",
           "latency": 3000,
           "statusCode": 200,
           "label": "",
@@ -248,79 +280,6 @@
         }
       ],
       "responseMode": null
-    },
-    {
-      "uuid": "527f7051-ddef-4dc2-b4a6-186ee7f1e61b",
-      "type": "http",
-      "documentation": "",
-      "method": "post",
-      "endpoint": "api/staffs/staff/create",
-      "responses": [
-        {
-          "uuid": "676f5e07-86a9-4086-b239-b230865cc22b",
-          "body": "{\n  \"status\": \"OK\"\n}",
-          "latency": 9000,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Accept",
-              "value": "application/json"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "fullName",
-              "value": "Ko Ko Kyaw",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "AND",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "561f424d-a391-422a-a1b1-6d94adf6933e",
-          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
-          "latency": 3000,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "fullName",
-              "value": "",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": "FALLBACK"
     },
     {
       "uuid": "d8844e5c-dda6-4b26-9809-191488fb8bd4",
@@ -460,63 +419,6 @@
         }
       ],
       "responseMode": "FALLBACK"
-    },
-    {
-      "uuid": "4c657e94-8faa-438b-846a-97817f35f925",
-      "type": "http",
-      "documentation": "",
-      "method": "post",
-      "endpoint": "api/staffs/staff/delete",
-      "responses": [
-        {
-          "uuid": "dbebd44f-83b0-401b-a75f-0c79a75bda0f",
-          "body": "{\n  \"status\": \"OK\"\n}",
-          "latency": 3000,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Accept",
-              "value": "application/json"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "AND",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "21813ae8-a8f0-4143-b3dc-12d870e5e8c5",
-          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
-          "latency": 3000,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
     },
     {
       "uuid": "be6e5b8d-8451-4d23-8119-44dbba8e4ab9",
@@ -745,7 +647,7 @@
         {
           "uuid": "88aa66da-811f-47c6-bbd7-2b7d6109050f",
           "body": "{\n  \"status\": \"OK\"\n}",
-          "latency": 3000,
+          "latency": 1500,
           "statusCode": 200,
           "label": "",
           "headers": [
@@ -781,7 +683,7 @@
         {
           "uuid": "155529d2-2ae1-4ca5-b648-f8b7bccac1a2",
           "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
-          "latency": 3000,
+          "latency": 1500,
           "statusCode": 400,
           "label": "",
           "headers": [],
@@ -793,8 +695,8 @@
             {
               "target": "body",
               "modifier": "fullName",
-              "value": "",
-              "invert": false,
+              "value": "holiday",
+              "invert": true,
               "operator": "equals"
             }
           ],
@@ -812,13 +714,13 @@
       "uuid": "9d70fbf5-e52f-43e4-9d72-e502b7f85360",
       "type": "http",
       "documentation": "",
-      "method": "post",
-      "endpoint": "api/holidays/holiday/delete",
+      "method": "delete",
+      "endpoint": "api/holidays/holiday/delete/1",
       "responses": [
         {
           "uuid": "3677fd6a-ee94-4469-b1ea-e61824118b86",
           "body": "{\n  \"status\": \"OK\"\n}",
-          "latency": 3000,
+          "latency": 1500,
           "statusCode": 200,
           "label": "",
           "headers": [
@@ -864,152 +766,6 @@
         }
       ],
       "responseMode": null
-    },
-    {
-      "uuid": "54bb95c8-5205-4c7a-a75d-f9d5dab5a768",
-      "type": "http",
-      "documentation": "",
-      "method": "post",
-      "endpoint": "api/holidays/holiday/edit",
-      "responses": [
-        {
-          "uuid": "fe5f18c2-9025-455b-8272-6e450d8ea75b",
-          "body": "{\n  \"status\": \"OK\"\n}",
-          "latency": 3000,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Accept",
-              "value": "application/json"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "name",
-              "value": "holiday",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "AND",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "f1172c21-b8e0-41be-98ad-f87e898907eb",
-          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
-          "latency": 3000,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "fullName",
-              "value": "",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": "FALLBACK"
-    },
-    {
-      "uuid": "149e7750-3b59-489a-9449-f9cdc28c3c17",
-      "type": "http",
-      "documentation": "",
-      "method": "post",
-      "endpoint": "api/staffs/staff/edit",
-      "responses": [
-        {
-          "uuid": "742124ef-c5f5-4a4c-9885-6e7d743b5c6a",
-          "body": "{\n  \"status\": \"OK\"\n}",
-          "latency": 3000,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Accept",
-              "value": "application/json"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "fullName",
-              "value": "Ko Ko Kyaw",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "AND",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "e1cfb595-5e89-417d-b772-490b6d863eab",
-          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
-          "latency": 3000,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "fullName",
-              "value": "",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": "FALLBACK"
     },
     {
       "uuid": "47d93011-a6f0-4efb-b272-bcc20f3908e0",
@@ -1443,7 +1199,7 @@
       "responses": [
         {
           "uuid": "584ce9ed-aa90-407a-aca7-516fdd9221c0",
-          "body": "[\n  {\n    \"id\": \"1\",\n    \"name\": \"Super Admin\",\n    \"moduleAccess\": [\n      \"dashboard\",\n      \"master\",\n      \"staffManagement\",\n      \"attendanceManagement\",\n      \"leaveManagement\",\n      \"payrollManagement\",\n      \"generalSetting\"\n    ],\n    \"description\": \"Super Admin role with full access to all modules\"\n  },\n  {\n    \"id\": \"2\",\n    \"name\": \"Manager\",\n    \"moduleAccess\": [\n      \"dashboard\",\n      \"master\",\n      \"staffManagement\",\n      \"attendanceManagement\",\n      \"leaveManagement\",\n      \"payrollManagement\",\n      \"generalSetting\"\n    ],\n    \"description\": \"Manager role with access to most administrative functions\"\n  },\n  {\n    \"id\": \"3\",\n    \"name\": \"Staff\",\n    \"moduleAccess\": [\n      \"dashboard\",\n      \"attendanceManagement\",\n      \"leaveManagement\"\n    ],\n    \"description\": \"Staff role with access to basic employee-related functions\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"name\": \"Super Admin\",\n    \"moduleAccess\": [\n      \"dashboard\",\n      \"master\",\n      \"staffManagement\",\n      \"attendanceManagement\",\n      \"leaveManagement\",\n      \"payrollManagement\",\n      \"generalSetting\"\n    ],\n    \"description\": \"Super Admin role with full access to all modules\"\n  },\n  {\n    \"id\": \"2\",\n    \"name\": \"Admin\",\n    \"moduleAccess\": [\n      \"dashboard\",\n      \"master\",\n      \"staffManagement\",\n      \"attendanceManagement\",\n      \"leaveManagement\",\n      \"payrollManagement\",\n      \"generalSetting\"\n    ],\n    \"description\": \"Manager role with access to most administrative functions\"\n  },\n  {\n    \"id\": \"3\",\n    \"name\": \"Staff\",\n    \"moduleAccess\": [\n      \"dashboard\",\n      \"attendanceManagement\",\n      \"leaveManagement\"\n    ],\n    \"description\": \"Staff role with access to basic employee-related functions\"\n  }\n]",
           "latency": 1000,
           "statusCode": 200,
           "label": "",
@@ -1622,7 +1378,7 @@
       "responses": [
         {
           "uuid": "e0fef93a-2c3f-4b39-b9e7-3b90a95c5903",
-          "body": "[\n  {\n    \"id\": \"1\",\n    \"prefixID\": \"HRD\",\n    \"name\": \"Human Resource Department\",\n    \"description\": \"Manages employee relations and personnel.\"\n  },\n  {\n    \"id\": \"2\",\n    \"prefixID\": \"ADM\",\n    \"name\": \"Admin Department\",\n    \"description\": \"Handles administrative tasks and office management.\"\n  },\n  {\n    \"id\": \"3\",\n    \"prefixID\": \"ACD\",\n    \"name\": \"Account Department\",\n    \"description\": \"Responsible for financial reporting and auditing.\"\n  },\n  {\n    \"id\": \"4\",\n    \"prefixID\": \"ITD\",\n    \"name\": \"IT Department\",\n    \"description\": \"Oversees technology and information systems.\"\n  },\n  {\n    \"id\": \"5\",\n    \"prefixID\": \"OPD\",\n    \"name\": \"Operation Department\",\n    \"description\": \"Ensures efficient business operations and processes.\"\n  },\n  {\n    \"id\": \"6\",\n    \"prefixID\": \"SAD\",\n    \"name\": \"Sale Department\",\n    \"description\": \"Drives sales strategies and customer engagement.\"\n  },\n  {\n    \"id\": \"7\",\n    \"prefixID\": \"MKD\",\n    \"name\": \"Marketing Department\",\n    \"description\": \"Manages branding and marketing initiatives.\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"prefixId\": \"HRD\",\n    \"name\": \"Human Resource Department\",\n    \"description\": \"Manages employee relations and personnel.\"\n  },\n  {\n    \"id\": \"2\",\n    \"prefixId\": \"ADM\",\n    \"name\": \"Admin Department\",\n    \"description\": \"Handles administrative tasks and office management.\"\n  },\n  {\n    \"id\": \"3\",\n    \"prefixId\": \"ACD\",\n    \"name\": \"Account Department\",\n    \"description\": \"Responsible for financial reporting and auditing.\"\n  },\n  {\n    \"id\": \"4\",\n    \"prefixId\": \"ITD\",\n    \"name\": \"IT Department\",\n    \"description\": \"Oversees technology and information systems.\"\n  },\n  {\n    \"id\": \"5\",\n    \"prefixId\": \"OPD\",\n    \"name\": \"Operation Department\",\n    \"description\": \"Ensures efficient business operations and processes.\"\n  },\n  {\n    \"id\": \"6\",\n    \"prefixId\": \"SAD\",\n    \"name\": \"Sale Department\",\n    \"description\": \"Drives sales strategies and customer engagement.\"\n  },\n  {\n    \"id\": \"7\",\n    \"prefixId\": \"MKD\",\n    \"name\": \"Marketing Department\",\n    \"description\": \"Manages branding and marketing initiatives.\"\n  }\n]",
           "latency": 1000,
           "statusCode": 200,
           "label": "",
@@ -2149,17 +1905,231 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "e39f44bf-f830-4918-beeb-a7005ca87ed6",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "api/holidays/holiday/update/1",
+      "responses": [
+        {
+          "uuid": "ce196403-8ac0-49a9-819f-7d75a5e64e22",
+          "body": "{\n  \"status\": \"OK\"\n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "99b85abb-8d89-4f5c-9d2f-363edc28de55",
+          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
+          "latency": 1500,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "fullName",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "FALLBACK"
+    },
+    {
+      "uuid": "2c8ba3fd-71b5-4faf-86f4-397278c044e4",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/staffs/staff/create",
+      "responses": [
+        {
+          "uuid": "17f05d90-7c98-4d10-9ebd-e2e8392b4f17",
+          "body": "{\n  \"status\": \"OK\"\n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "fullName",
+              "value": "Ko Ko Kyaw",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "db5e8c8a-1792-4d40-8868-d4a6ed3d688d",
+          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
+          "latency": 1500,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "fullName",
+              "value": "Ko Ko Kyaw",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "FALLBACK"
+    },
+    {
+      "uuid": "d6f9ddd6-3700-462c-9106-9440ece2af13",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "api/staffs/staff/update/1",
+      "responses": [
+        {
+          "uuid": "3103eb7f-0a8c-4646-9667-5f26a5e9f828",
+          "body": "{\n  \"status\": \"OK\"\n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "f61735a5-3e19-4799-b522-d7930789dd00",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "api/staffs/staff/delete/1",
+      "responses": [
+        {
+          "uuid": "102a0b35-6ac4-453c-903c-f1ba8aa05920",
+          "body": "{\n  \"status\": \"OK\"\n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
-    {
-      "type": "folder",
-      "uuid": "d3b27403-cadf-4109-8f87-f581f0d9bdaa"
-    },
-    {
-      "type": "folder",
-      "uuid": "5499097f-075b-42c9-9303-8803239a7e56"
-    },
     {
       "type": "folder",
       "uuid": "3209f21a-59ec-4c93-9008-9e916fefe83d"
@@ -2170,19 +2140,15 @@
     },
     {
       "type": "folder",
-      "uuid": "37e4a331-1eef-4c05-8f6b-f98e2cac2558"
+      "uuid": "87735f85-0366-40a5-9136-cd3c54b2e1ad"
     },
     {
       "type": "folder",
-      "uuid": "ac149b0e-f059-421f-ab84-11cfb806639d"
+      "uuid": "816f70b4-2dd8-4bb6-8223-14bc9dc4b900"
     },
     {
       "type": "folder",
-      "uuid": "8f48bf4d-de62-4792-89d5-0e8227e6e474"
-    },
-    {
-      "type": "folder",
-      "uuid": "bbeedf28-43d8-4498-8786-288df05d81b4"
+      "uuid": "bc7910bf-807a-4f0e-b1f2-67ebf3624a6e"
     }
   ],
   "proxyMode": false,

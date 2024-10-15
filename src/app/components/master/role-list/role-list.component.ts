@@ -131,8 +131,7 @@ export class RoleListComponent implements OnInit, OnDestroy {
   }
 
   closeModal(): void {
-    this.createEditRoleModal = false;
-    this.detailsRoleModal = false;
+    this.modal.closeAll();
     this.resetForm();
   }
 

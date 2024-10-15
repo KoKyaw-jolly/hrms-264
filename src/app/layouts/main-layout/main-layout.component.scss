@@ -9,10 +9,12 @@
 
   .main-layout__sidebar {
     width: 260px;
+    height: 100vh;
     background-color: #fff;
     flex-shrink: 0;
     transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
     box-shadow: $card-box-shadow;
+    overflow-y: auto;
 
     &.menuCollapsed {
       width: 80px;

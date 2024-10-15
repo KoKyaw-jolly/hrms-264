@@ -1,13 +1,13 @@
 export interface Department {
     id: string;
-    prefixID: string;
+    prefixId: string;
     name: string;
     description: string;
 }
 
 export const defaultDepartmentObj: Department = {
     id: '',
-    prefixID: '',
+    prefixId: '',
     name: '',
     description: ''
 }

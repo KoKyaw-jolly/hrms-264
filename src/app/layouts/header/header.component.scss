@@ -95,14 +95,6 @@
   align-items: center;
 
   .calendar-wrapper {
-    border: 1px solid $border-color-base;
-  }
-  .fullCalendar{
-    color: $text-color-secondary;
-    cursor: pointer;
-
-    &:hover{
-      color: $text-color;
-    }
+    border-bottom: 1px solid $border-color-base;
   }
 }

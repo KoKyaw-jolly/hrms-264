@@ -1,0 +1,19 @@
+@if (calendarType === 'small') {
+    <div class="custom-calendar-small">
+        <nz-calendar>
+            <div *nzDateFullCell="let date" class="custom-cell" [ngClass]="{'holiday': isHoliday(date),'weekend': isWeekend(date)}">
+                {{date| date:'dd'}}
+            </div>
+        </nz-calendar>
+    </div>
+} @else if (calendarType === 'medium') {
+
+    <div class="custom-calendar-medium">
+        <nz-calendar>
+            <div *nzDateFullCell="let date" class="custom-cell" [ngClass]="{'holiday': isHoliday(date),'weekend': isWeekend(date)}">
+                <span>{{date | date:'dd'}}</span>
+                <p>{{isHolidayName(date)?.name || '-' | nzEllipsis:20:'...'}}</p>
+            </div>
+        </nz-calendar>
+    </div>
+}

@@ -1,4 +1,4 @@
-@import '../../tokens/build/scss/variables.scss';
+@import "../../tokens/build/scss/variables.scss";
 
 .side-menu-wrapper {
   max-width: 240px;
@@ -39,21 +39,28 @@
     line-height: $menu-vertical-item-line-height !important;
   }
 
-  .menu-item{
+  .menu-item {
     display: flex;
     gap: $spacing-xs;
     align-items: center;
     height: 32px;
 
-    i{
+    i {
       font-size: 16px;
     }
   }
-  .ant-menu-inline-collapsed .menu-item .menu-name{
+  .ant-menu-inline-collapsed .menu-item .menu-name {
     display: none;
   }
 
-  .ant-menu-submenu-arrow{
+  .ant-menu-submenu-arrow {
     transition: all 0.15s;
+  }
+
+  .ant-menu-light .ant-menu-submenu-active {
+    color: $text-color;
+  }
+  .ant-menu-light .ant-menu-submenu-selected {
+    color: $primary-color;
   }
 }

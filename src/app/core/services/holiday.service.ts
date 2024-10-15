@@ -1,28 +1,55 @@
-// import { HttpClient } from '@angular/common/http';
-// import { Injectable } from '@angular/core';
-// import { Observable, delay, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, catchError, delay, of, throwError } from 'rxjs';
+import { Holiday } from '../models/holiday.interface';
 // import { Holiday } from '../models/holiday.interface';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class HolidayService {
-//   constructor(private http: HttpClient) { }
+@Injectable({
+  providedIn: 'root'
+})
+export class HolidayService {
 
-//   getAllHoliday(): Observable<Holiday[]> {
-//     return this.http.get<Holiday[]>('http://localhost:3200/api/holidays/all-holiday/');
-//   }
+  private apiUrl = 'http://localhost:3200/api/holidays';
 
-//   createEditHoliday(holiday: Holiday, createEditStatus: string): Observable<Holiday> {
-//     if (createEditStatus === 'create') {
-//       return this.http.post<Holiday>('http://localhost:3200/api/holidays/holiday/create', holiday);
-//     } else {
-//       return this.http.post<Holiday>('http://localhost:3200/api/holidays/holiday/edit', holiday);
-//     }
-//   }
+  constructor(private http: HttpClient) { }
 
-//   deleteHoliday(holiday: Holiday): Observable<Holiday> {
-//     return this.http.post<Holiday>('http://localhost:3200/api/holidays/holiday/delete', holiday);
-//   }
+  getAllHoliday(): Observable<Holiday[]> {
+    return this.http.get<Holiday[]>(`${this.apiUrl}/all-holiday`).pipe(
+      catchError(error => {
+        console.error('Error:', error);
+        return throwError(() => new Error('Failed to fetch holidays'));
+      })
+    );
+  }
 
-// }
+  // Create a new holiday
+  createHoliday(holiday: Holiday): Observable<Holiday> {
+    return this.http.post<Holiday>(`${this.apiUrl}/holiday/create`, holiday).pipe(
+      catchError(error => {
+        console.error('Error:', error);
+        return throwError(() => new Error('Failed to create holiday'));
+      })
+    );
+  }
+
+  // Update an existing holiday
+  updateHoliday(holiday: Holiday): Observable<Holiday> {
+    return this.http.put<Holiday>(`${this.apiUrl}/holiday/update/${holiday.id}`, holiday).pipe(
+      catchError(error => {
+        console.error('Error:', error);
+        return throwError(() => new Error('Failed to update holiday'));
+      })
+    );
+  }
+
+  // Delete a holiday by ID
+  deleteHoliday(holidayId: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/holiday/delete/${holidayId}`).pipe(
+      catchError(error => {
+        console.error('Error:', error);
+        return throwError(() => new Error('Failed to delete holiday'));
+      })
+    );
+  }
+
+}

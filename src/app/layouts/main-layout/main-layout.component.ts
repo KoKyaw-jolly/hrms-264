@@ -10,6 +10,8 @@ import * as roleActions from '../../store/action/role.action';
 import * as departmentActions from '../../store/action/department.action';
 import * as positionActions from '../../store/action/position.action';
 import * as leaveTypeActions from '../../store/action/leave-type.action';
+import * as holidayActions from '../../store/action/holiday.action';
+import * as staffActions from '../../store/action/staff.action';
 
 @Component({
   selector: 'app-main-layout',
@@ -38,6 +40,8 @@ export class MainLayoutComponent implements OnInit {
     this.store.dispatch(departmentActions.loadDepartment());
     this.store.dispatch(positionActions.loadPosition());
     this.store.dispatch(leaveTypeActions.loadLeaveType());
+    this.store.dispatch(holidayActions.loadHoliday());
+    this.store.dispatch(staffActions.loadStaff());
   }
 
 }

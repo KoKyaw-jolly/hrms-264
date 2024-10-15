@@ -83,5 +83,18 @@ export const SideMenuList: Menu[] = [
                 routelink: "attendance-management/attendance-report"
             }
         ]
+    },
+    {
+        id: "generalSetting",
+        name: "General Setting",
+        icon: "fi fi-rr-settings-sliders",
+        routelink: "",
+        sibmenuItems: [
+            {
+                id: "calendarManagement",
+                name: "Calendar Management",
+                routelink: "general-setting/calendar-management"
+            }
+        ]
     }
 ]

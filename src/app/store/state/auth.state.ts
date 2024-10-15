@@ -13,16 +13,18 @@ export interface AuthInfoState {
 export const authInitialState: AuthInfoState = {
     userInfo: {
         user: {
+            id: '',
             staffId: '',
             fullName: '',
             image: '',
             gender: '',
-            positionID: '',
-            departmentID: '',
+            birthday: new Date(),
+            positionId: '',
+            departmentId: '',
             email: '',
             phone: '',
             address: '',
-            roleID: '',
+            roleId: '',
             leaveBalance: []
         }
     },

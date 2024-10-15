@@ -40,7 +40,7 @@ export class DepartmentListComponent implements OnInit {
   ) {
     this.departmentForm = this.fb.group({
       id: [''],
-      prefixID: ['', Validators.required],
+      prefixId: ['', Validators.required],
       name: ['', Validators.required],
       description: [''],
     });
@@ -71,7 +71,7 @@ export class DepartmentListComponent implements OnInit {
     this.createEditDepartmentModal = true;
     this.departmentForm.setValue({
       id: department.id,
-      prefixID: department.prefixID,
+      prefixId: department.prefixId,
       name: department.name,
       description: department.description
     });
@@ -89,7 +89,7 @@ export class DepartmentListComponent implements OnInit {
     } else {
       const departmentData: Department = {
         id: this.createEditState == 'create' ? '' : this.departmentForm.get('id')?.value,
-        prefixID: this.departmentForm.get('prefixID')?.value,
+        prefixId: this.departmentForm.get('prefixId')?.value,
         name: this.departmentForm.get('name')?.value,
         description: this.departmentForm.get('description')?.value || '',
       }
@@ -126,15 +126,14 @@ export class DepartmentListComponent implements OnInit {
   }
 
   closeModal(): void {
-    this.createEditDepartmentModal = false;
-    this.detailsDepartmentModal = false;
+    this.modal.closeAll();
     this.resetForm();
   }
 
   resetForm(): void {
     this.departmentForm.setValue({
       id: '',
-      prefixID: '',
+      prefixId: '',
       name: '',
       description: ''
     });

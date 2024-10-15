@@ -6,6 +6,10 @@ import { RoleListComponent } from './components/master/role-list/role-list.compo
 import { DepartmentListComponent } from './components/master/department-list/department-list.component';
 import { PositionListComponent } from './components/master/position-list/position-list.component';
 import { LeaveTypeComponent } from './components/master/leave-type/leave-type.component';
+import { CalendarManagementComponent } from './components/general-setting/calendar-management/calendar-management.component';
+import { CustomCalendarComponent } from './share/components/custom-calendar/custom-calendar.component';
+import { StaffCreateEditComponent } from './components/staff-management/staff-create-edit/staff-create-edit.component';
+import { StaffListComponent } from './components/staff-management/staff-list/staff-list.component';
 
 export const APP_ROUTES: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/login' },
@@ -13,11 +17,30 @@ export const APP_ROUTES: Routes = [
     {
         path: '', component: MainLayoutComponent, children: [
             { path: 'dashboard', component: MainDashboardComponent },
-            { path: 'master/role-list', component: RoleListComponent },
-            { path: 'master/department-list', component: DepartmentListComponent },
-            { path: 'master/position-list', component: PositionListComponent },
-            { path: 'master/leave-type', component: LeaveTypeComponent },
-            
+            {
+                path: 'master', children: [
+                    { path: 'role-list', component: RoleListComponent },
+                    { path: 'department-list', component: DepartmentListComponent },
+                    { path: 'position-list', component: PositionListComponent },
+                    { path: 'leave-type', component: LeaveTypeComponent },
+                ]
+            },
+            {
+                path: 'staff-management', children: [
+                    { path: 'staff-list',children: [
+                        { path: '', component: StaffListComponent },
+                        { path: 'staff-edit/:id', component: StaffCreateEditComponent },
+                    ]
+                    },
+                    { path: 'staff-create', component: StaffCreateEditComponent },
+                ]
+            },
+            {
+                path: 'general-setting', children: [
+                    // { path: 'calendar-management', component: CalendarManagementComponent },
+                    { path: 'calendar-management', component: CustomCalendarComponent }
+                ]
+            },
         ]
     }
 ];

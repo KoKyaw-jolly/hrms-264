@@ -122,8 +122,7 @@ export class LeaveTypeComponent {
   }
 
   closeModal(): void {
-    this.createEditLeaveTypeModal = false;
-    this.detailsLeaveTypeModal = false;
+    this.modal.closeAll();
     this.resetForm();
   }
 

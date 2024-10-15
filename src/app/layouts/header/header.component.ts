@@ -4,11 +4,15 @@ import { APP_IMPORT } from '../../app.import';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/state/app.state';
 import * as AuthAction from '../../store/action/auth.action';
+import { CustomCalendarComponent } from '../../share/components/custom-calendar/custom-calendar.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [APP_IMPORT],
+  imports: [
+    APP_IMPORT,
+    CustomCalendarComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

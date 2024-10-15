@@ -10,7 +10,7 @@
         <ul nz-menu nzMode="inline" [nzInlineCollapsed]="menuCollapsed">
             @for(menu of sideMenuList; track menu.id){
             @if(menu.sibmenuItems && menu.sibmenuItems.length > 0){
-            <li nz-submenu [nzTitle]="master">
+            <li nz-submenu [nzTitle]="master" [nzOpen]="true" nzMatchRouter>
                 <ng-template #master>
                     <div class="menu-item">
                         <i [class]="menu.icon"></i>

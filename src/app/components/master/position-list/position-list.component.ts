@@ -132,8 +132,7 @@ export class PositionListComponent {
   }
 
   closeModal(): void {
-    this.createEditPositionModal = false;
-    this.detailsPositionModal = false;
+    this.modal.closeAll();
     this.resetForm();
   }
 

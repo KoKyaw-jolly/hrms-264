@@ -1,26 +1,36 @@
+export interface LeaveBalance {
+    leaveTypeId: string;
+    leaveBalance: number;
+    leaveTaken: number;
+    leaveRemaining: number;
+}
 
 export interface Staff {
+    id: string;
     staffId: string;
     fullName: string;
     image: string;
     gender: string;
-    positionID: string;
-    departmentID: string;
-    roleID: string;
+    birthday: Date;
+    positionId: string;
+    departmentId: string;
+    roleId: string;
     email: string;
     phone: string;
     address: string;
-    leaveBalance: [];
+    leaveBalance: LeaveBalance[];
 }
 
 export const staffEmptyInitialObj: Staff = {
+    id: '',
     staffId: '',
     fullName: '',
     image: '',
     gender: '',
-    positionID: '',
-    departmentID: '',
-    roleID: '',
+    birthday: new Date(),
+    positionId: '',
+    departmentId: '',
+    roleId: '',
     email: '',
     phone: '',
     address: '',

@@ -23,6 +23,10 @@ import { positionReducer } from './store/reducer/position.reducer';
 import { PositionEffect } from './store/effect/position.effect';
 import { leaveTypeReducer } from './store/reducer/leave-type.reducer';
 import { LeaveTypeEffect } from './store/effect/leave-type.effect';
+import { holidayReducer } from './store/reducer/holiday.reducer';
+import { HolidayEffect } from './store/effect/holiday.effect';
+import { staffReducer } from './store/reducer/staff.reducer';
+import { StaffEffect } from './store/effect/staff.effect';
 
 registerLocaleData(en);
 
@@ -41,7 +45,9 @@ export const appConfig: ApplicationConfig = {
           role: roleReducer,
           department: departmentReducer,
           position:positionReducer,
-          leaveType: leaveTypeReducer
+          leaveType: leaveTypeReducer,
+          holiday: holidayReducer,
+          staff: staffReducer
         },
         {
           metaReducers,
@@ -56,7 +62,9 @@ export const appConfig: ApplicationConfig = {
         RoleEffect,
         DepartmentEffect,
         PositionEffect,
-        LeaveTypeEffect
+        LeaveTypeEffect,
+        HolidayEffect,
+        StaffEffect
       ]),
       StoreDevtoolsModule.instrument()
     )

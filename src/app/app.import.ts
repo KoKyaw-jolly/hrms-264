@@ -26,6 +26,9 @@ import { NzSkeletonModule } from "ng-zorro-antd/skeleton";
 import { NzSpinModule } from "ng-zorro-antd/spin";
 import { NzCalendarModule } from "ng-zorro-antd/calendar";
 import { NzToolTipModule } from "ng-zorro-antd/tooltip";
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { NzPipesModule } from 'ng-zorro-antd/pipes';
+
 
 export const APP_IMPORT = [
     CommonModule,
@@ -58,5 +61,7 @@ export const APP_IMPORT = [
     NzSkeletonModule,
     NzSpinModule,
     NzCalendarModule,
-    NzToolTipModule
+    NzToolTipModule,
+    NzDrawerModule,
+    NzPipesModule
 ]
