@@ -10,6 +10,7 @@ import { CalendarManagementComponent } from './components/general-setting/calend
 import { CustomCalendarComponent } from './share/components/custom-calendar/custom-calendar.component';
 import { StaffCreateEditComponent } from './components/staff-management/staff-create-edit/staff-create-edit.component';
 import { StaffListComponent } from './components/staff-management/staff-list/staff-list.component';
+import { StaffReportComponent } from './components/staff-management/staff-report/staff-report.component';
 
 export const APP_ROUTES: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/login' },
@@ -33,6 +34,7 @@ export const APP_ROUTES: Routes = [
                     ]
                     },
                     { path: 'staff-create', component: StaffCreateEditComponent },
+                    { path: 'staff-report', component: StaffReportComponent },
                 ]
             },
             {

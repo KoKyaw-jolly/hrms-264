@@ -1,0 +1,55 @@
+<div class="main-card-wrapper">
+    <div>
+        <h4 nz-typography>Staff List</h4>
+        <p nz-typography nzType="secondary">Manage data for all staff.</p>
+    </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <nz-form-item>
+                    <nz-form-label nzFor="fullName">Full Name</nz-form-label>
+                    <nz-select ngModel="lucy">
+                        <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                        <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                        <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+                      </nz-select>
+                </nz-form-item>
+            </div>
+        </div>
+    <div class="row">
+        nz
+        <button nz-button nzType="primary" (click)="search()">Search</button>
+    </div>
+    <nz-spin nzTip="Loading..." [nzSpinning]="staffLoading">
+        <nz-table #staffList [nzData]="staffListDataForTable" [nzScroll]="{x: '1800px'}">
+            <thead>
+                <tr>
+                    <th nzWidth="100px" nzLeft>Staff ID</th>
+                    <th nzWidth="160px" nzLeft>Full Name</th>
+                    <th nzWidth="80px">Gender</th>
+                    <th nzWidth="120px">Birthday</th>
+                    <th nzWidth="200px">Position</th>
+                    <th nzWidth="270px">Department</th>
+                    <th nzWidth="120px">Role</th>
+                    <th nzWidth="250px">Email</th>
+                    <th nzWidth="150px">Phone</th>
+                    <th nzWidth="350px">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let staff of staffList.data">
+                    <td nzLeft>{{ staff.staffId }}</td>
+                    <td nzLeft><b>{{ staff.fullName }}</b></td>
+                    <td>{{ staff.gender === 'male' ? 'Male' : 'Female' }}</td>
+                    <td>{{ staff.birthday | date:'dd MMM YYYY' }}</td>
+                    <td>{{ getPositionName(staff.positionId) }}</td>
+                    <td>{{ getDepartmentName(staff.departmentId) }}</td>
+                    <td>{{ getRoleName(staff.roleId) }}</td>
+                    <td>{{ staff.email }}</td>
+                    <td>{{ staff.phone }}</td>
+                    <td>{{ staff.address }}</td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </nz-spin>
+</div>
