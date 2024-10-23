@@ -1,4 +1,4 @@
-import { Department } from "../../../core/models/department.interface";
+import { Department } from "../../../core/models/master/department.interface";
 
 export interface DepartmentState {
     department: Department[];

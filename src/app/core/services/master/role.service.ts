@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, delay, of, throwError } from 'rxjs';
-import { Role } from '../models/role.interface';
+import { Role } from '../../models/master/role.interface';
 // import { Holiday } from '../models/holiday.interface';
 
 @Injectable({

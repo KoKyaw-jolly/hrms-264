@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, delay, of, throwError } from 'rxjs';
-import { Position } from '../models/position.interface';
+import { Position } from '../../models/master/position.interface';
 // import { Holiday } from '../models/holiday.interface';
 
 @Injectable({

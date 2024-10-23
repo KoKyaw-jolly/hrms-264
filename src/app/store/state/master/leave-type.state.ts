@@ -1,4 +1,4 @@
-import { LeaveType } from "../../../core/models/leave-type.interface";
+import { LeaveType } from "../../../core/models/master/leave-type.interface";
 
 export interface LeaveTypeState {
     leaveType: LeaveType[];

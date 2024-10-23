@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { defaultDepartmentObj, Department } from '../../../core/models/department.interface';
+import { defaultDepartmentObj, Department } from '../../../core/models/master/department.interface';
 import { APP_IMPORT } from '../../../app.import';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';

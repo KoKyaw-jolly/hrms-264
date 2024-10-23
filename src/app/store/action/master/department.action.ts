@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Department } from "../../../core/models/department.interface";
+import { Department } from "../../../core/models/master/department.interface";
 
 export const loadDepartment = createAction('[Department] Load department');
 export const loadDepartmentSuccess = createAction('[Department] Load department success', props<{ department: Department[] }>());

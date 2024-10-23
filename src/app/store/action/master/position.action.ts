@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Position } from "../../../core/models/position.interface";
+import { Position } from "../../../core/models/master/position.interface";
 
 export const loadPosition = createAction('[Position] Load position');
 export const loadPositionSuccess = createAction('[Position] Load position success', props<{ position: Position[] }>());

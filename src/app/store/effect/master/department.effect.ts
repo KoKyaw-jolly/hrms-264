@@ -3,8 +3,8 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as departmentActions from '../../action/master/department.action';
 import { catchError, map, mergeMap, of } from "rxjs";
 import { NzMessageService } from "ng-zorro-antd/message";
-import { DepartmentService } from "../../../core/services/department.service";
-import { Department } from "../../../core/models/department.interface";
+import { DepartmentService } from "../../../core/services/master/department.service";
+import { Department } from "../../../core/models/master/department.interface";
 
 
 @Injectable()

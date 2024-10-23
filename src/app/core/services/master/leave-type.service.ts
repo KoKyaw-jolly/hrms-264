@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, delay, of, throwError } from 'rxjs';
-import { LeaveType } from '../models/leave-type.interface';
+import { LeaveType } from '../../models/master/leave-type.interface';
 // import { Holiday } from '../models/holiday.interface';
 
 @Injectable({

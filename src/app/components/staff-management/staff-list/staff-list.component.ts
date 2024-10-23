@@ -9,10 +9,10 @@ import { selectPosition } from '../../../store/selector/master/position.selector
 import { selectDepartment } from '../../../store/selector/master/department.selector';
 import { selectRole } from '../../../store/selector/master/role.selector';
 import { selectLeaveType } from '../../../store/selector/master/leave-type.selector';
-import { Position } from '../../../core/models/position.interface';
-import { Department } from '../../../core/models/department.interface';
-import { Role } from '../../../core/models/role.interface';
-import { LeaveType } from '../../../core/models/leave-type.interface';
+import { Position } from '../../../core/models/master/position.interface';
+import { Department } from '../../../core/models/master/department.interface';
+import { Role } from '../../../core/models/master/role.interface';
+import { LeaveType } from '../../../core/models/master/leave-type.interface';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import * as staffActions from '../../../store/action/staff.action';
 import { Router } from '@angular/router';

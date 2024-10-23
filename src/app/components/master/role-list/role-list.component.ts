@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { APP_IMPORT } from '../../../app.import';
-import { defaultRoleObj, Role } from '../../../core/models/role.interface';
+import { defaultRoleObj, Role } from '../../../core/models/master/role.interface';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/state/app.state';
 import { Subscription } from 'rxjs';

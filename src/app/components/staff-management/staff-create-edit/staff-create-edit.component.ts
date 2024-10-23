@@ -7,14 +7,14 @@ import { APP_IMPORT } from '../../../app.import';
 import { AppState } from '../../../store/state/app.state';
 import { LeaveBalance, Staff, staffEmptyInitialObj } from '../../../core/models/staff.interface';
 import { selectStaffById, selectStaffLoading } from '../../../store/selector/staff.selector';
-import { Position } from '../../../core/models/position.interface';
-import { Role } from '../../../core/models/role.interface';
-import { Department } from '../../../core/models/department.interface';
+import { Position } from '../../../core/models/master/position.interface';
+import { Role } from '../../../core/models/master/role.interface';
+import { Department } from '../../../core/models/master/department.interface';
 import { selectPosition } from '../../../store/selector/master/position.selector';
 import { selectDepartment } from '../../../store/selector/master/department.selector';
 import { selectRole } from '../../../store/selector/master/role.selector';
 import { selectLeaveType } from '../../../store/selector/master/leave-type.selector';
-import { LeaveType } from '../../../core/models/leave-type.interface';
+import { LeaveType } from '../../../core/models/master/leave-type.interface';
 import { Subject } from 'rxjs';
 import * as staffActions from '../../../store/action/staff.action';
 

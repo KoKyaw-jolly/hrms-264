@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { APP_IMPORT } from '../../../app.import';
 import { ModalDetailsContentComponent } from '../../../share/components/modal-details-content/modal-details-content.component';
-import { defaultLeaveTypeObj, LeaveType } from '../../../core/models/leave-type.interface';
+import { defaultLeaveTypeObj, LeaveType } from '../../../core/models/master/leave-type.interface';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/state/app.state';

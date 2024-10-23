@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { defaultPositionObj, Position } from '../../../core/models/position.interface';
+import { defaultPositionObj, Position } from '../../../core/models/master/position.interface';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/state/app.state';
@@ -9,7 +9,7 @@ import { selectPosition } from '../../../store/selector/master/position.selector
 import { APP_IMPORT } from '../../../app.import';
 import { ModalDetailsContentComponent } from '../../../share/components/modal-details-content/modal-details-content.component';
 import { selectDepartment } from '../../../store/selector/master/department.selector';
-import { Department } from '../../../core/models/department.interface';
+import { Department } from '../../../core/models/master/department.interface';
 import { NzModalService } from 'ng-zorro-antd/modal';
 
 @Component({
