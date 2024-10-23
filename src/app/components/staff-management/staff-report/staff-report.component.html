@@ -1,25 +1,63 @@
 <div class="main-card-wrapper">
     <div>
-        <h4 nz-typography>Staff List</h4>
+        <h4 nz-typography>Staff Report</h4>
         <p nz-typography nzType="secondary">Manage data for all staff.</p>
     </div>
-
+    <form nz-form [nzLayout]="'vertical'">
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <nz-form-item>
-                    <nz-form-label nzFor="fullName">Full Name</nz-form-label>
-                    <nz-select ngModel="lucy">
-                        <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-                        <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-                        <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
-                      </nz-select>
+                    <nz-form-label nzFor="gender">Gender</nz-form-label>
+                    <nz-form-control>
+                        <nz-select nzPlaceHolder="Select gender" nzAllowClear [(ngModel)]="gender" name="gender">
+                            <nz-option nzValue="male" nzLabel="Male"></nz-option>
+                            <nz-option nzValue="female" nzLabel="Female"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
                 </nz-form-item>
             </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <nz-form-item>
+                    <nz-form-label nzFor="position">Position</nz-form-label>
+                    <nz-form-control>
+                        <nz-select nzPlaceHolder="select position" nzAllowClear [(ngModel)]="position" name="position">
+                            @for (item of positionListData; track $index) {
+                            <nz-option [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+                            }
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <nz-form-item>
+                    <nz-form-label nzFor="department">Department</nz-form-label>
+                    <nz-form-control>
+                        <nz-select nzPlaceHolder="select department" nzAllowClear [(ngModel)]="department"
+                            name="department">
+                            @for (item of departmentListData; track $index) {
+                            <nz-option [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+                            }
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <nz-form-item>
+                    <nz-form-label nzFor="role">Role</nz-form-label>
+                    <nz-form-control>
+                        <nz-select nzPlaceHolder="select role" nzAllowClear [(ngModel)]="role" name="role">
+                            @for (item of roleListData; track $index) {
+                            <nz-option [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+                            }
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="col-sm-12">
+                <button nz-button nzType="primary" (click)="search()">Search</button>
+            </div>
         </div>
-    <div class="row">
-        nz
-        <button nz-button nzType="primary" (click)="search()">Search</button>
-    </div>
+    </form>
     <nz-spin nzTip="Loading..." [nzSpinning]="staffLoading">
         <nz-table #staffList [nzData]="staffListDataForTable" [nzScroll]="{x: '1800px'}">
             <thead>

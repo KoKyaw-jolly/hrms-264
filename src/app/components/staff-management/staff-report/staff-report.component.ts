@@ -27,7 +27,7 @@ export class StaffReportComponent implements OnInit, OnDestroy {
 
   staffListData: Staff[] = [];
   staffListDataForTable: Staff[] = [];
-  staffLoading:boolean = false;
+  staffLoading: boolean = false;
   loadDataLoading: boolean = false;
   positionListData: Position[] = [];
   departmentListData: Department[] = [];
@@ -36,7 +36,10 @@ export class StaffReportComponent implements OnInit, OnDestroy {
   isLoading: boolean = this.staffLoading && this.loadDataLoading;
 
   //search field
-  gender: string = '';
+  gender: string|null = null;
+  position: string|null = null;
+  department: string|null = null;
+  role: string|null = null;
 
   private subscribe: Subscription = new Subscription();
   private unsubscribe$ = new Subject<void>();
@@ -49,6 +52,7 @@ export class StaffReportComponent implements OnInit, OnDestroy {
     this.subscribe.add(
       this.store.select(state => state.staff.staff).subscribe(res => {
         this.staffListData = res;
+        this.staffListDataForTable = res;
       })
     );
 
@@ -103,7 +107,14 @@ export class StaffReportComponent implements OnInit, OnDestroy {
     this.subscribe.unsubscribe();
   }
 
-  search(){
-    this.staffListDataForTable = this.staffListData;
+  search() {
+    this.staffListDataForTable = this.staffListData.filter(staff => {
+      return (
+        (this.gender === null || staff.gender === this.gender) &&
+        (this.position === null || staff.positionId === this.position) &&
+        (this.department === null || staff.departmentId === this.department) &&
+        (this.role === null || staff.roleId === this.role)
+      );
+    });
   }
 }
