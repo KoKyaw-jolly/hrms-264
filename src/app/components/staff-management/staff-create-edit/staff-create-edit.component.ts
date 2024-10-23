@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest, Subscription, takeUntil } from 'rxjs';
 import { APP_IMPORT } from '../../../app.import';
 import { AppState } from '../../../store/state/app.state';
-import { LeaveBalance, Staff, staffEmptyInitialObj } from '../../../core/models/staff.interface';
+import { StaffLeaveBalance, Staff, staffEmptyInitialObj } from '../../../core/models/staff.interface';
 import { selectStaffById, selectStaffLoading } from '../../../store/selector/staff.selector';
 import { Position } from '../../../core/models/master/position.interface';
 import { Role } from '../../../core/models/master/role.interface';
@@ -17,6 +17,8 @@ import { selectLeaveType } from '../../../store/selector/master/leave-type.selec
 import { LeaveType } from '../../../core/models/master/leave-type.interface';
 import { Subject } from 'rxjs';
 import * as staffActions from '../../../store/action/staff.action';
+import { StaffType } from '../../../core/models/master/staff-type.interface';
+import { selectStaffType } from '../../../store/selector/master/staff-type.selector';
 
 @Component({
   selector: 'app-staff-create-edit',
@@ -39,6 +41,7 @@ export class StaffCreateEditComponent implements OnInit, OnDestroy {
   departmentListData: Department[] = [];
   roleListData: Role[] = [];
   leaveTypeListData: LeaveType[] = [];
+  staffTypeListData: StaffType[] = [];
 
   private subscriptions: Subscription = new Subscription();
 
@@ -57,6 +60,7 @@ export class StaffCreateEditComponent implements OnInit, OnDestroy {
       birthday: [null, Validators.required],
       positionId: ['', Validators.required],
       departmentId: ['', Validators.required],
+      staffTypeId: ['', Validators.required],
       roleId: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
@@ -86,14 +90,16 @@ export class StaffCreateEditComponent implements OnInit, OnDestroy {
       this.store.select(selectPosition),
       this.store.select(selectDepartment),
       this.store.select(selectRole),
-      this.store.select(selectLeaveType)
+      this.store.select(selectLeaveType),
+      this.store.select(selectStaffType)
     ])
       .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(([positionRes, departmentRes, roleRes, leaveTypeRes]) => {
+      .subscribe(([positionRes, departmentRes, roleRes, leaveTypeRes, staffTypeRes]) => {
         this.positionListData = positionRes.position;
         this.departmentListData = departmentRes.department;
         this.roleListData = roleRes.role;
         this.leaveTypeListData = leaveTypeRes.leaveType;
+        this.staffTypeListData = staffTypeRes.staffType;
         this.staffLoading = false;
       });
   }
@@ -119,6 +125,7 @@ export class StaffCreateEditComponent implements OnInit, OnDestroy {
       birthday: new Date(data.birthday),
       positionId: data.positionId,
       departmentId: data.departmentId,
+      staffTypeId: data.staffTypeId,
       roleId: data.roleId,
       email: data.email,
       phone: data.phone,
@@ -154,8 +161,8 @@ export class StaffCreateEditComponent implements OnInit, OnDestroy {
         birthday: this.staffForm.get('birthday')?.value,
         positionId: this.staffForm.get('positionId')?.value,
         departmentId: this.staffForm.get('departmentId')?.value,
+        staffTypeId: this.staffForm.get('staffTypeId')?.value,
         roleId: this.staffForm.get('roleId')?.value,
-        staffType: '',
         email: this.staffForm.get('email')?.value,
         phone: this.staffForm.get('phone')?.value,
         address: this.staffForm.get('address')?.value,

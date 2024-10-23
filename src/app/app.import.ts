@@ -28,6 +28,8 @@ import { NzCalendarModule } from "ng-zorro-antd/calendar";
 import { NzToolTipModule } from "ng-zorro-antd/tooltip";
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
 
 
 export const APP_IMPORT = [
@@ -63,5 +65,7 @@ export const APP_IMPORT = [
     NzCalendarModule,
     NzToolTipModule,
     NzDrawerModule,
-    NzPipesModule
+    NzPipesModule,
+    NzListModule,
+    NzEmptyModule
 ]

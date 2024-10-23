@@ -1,0 +1,17 @@
+@import '../../../../tokens/build/scss/variables.scss';
+
+.leave-balance-input-group{
+    margin-bottom: 16px;
+
+    .leave-type-select{
+        min-width: 200px;
+        text-align: left;
+    }
+}
+
+.no-data{
+    width: 100%;
+    text-align: center;
+    padding: $padding-sm;
+    color: $text-color-secondary;
+}

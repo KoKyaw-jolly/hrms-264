@@ -59,13 +59,14 @@
         </div>
     </form>
     <nz-spin nzTip="Loading..." [nzSpinning]="staffLoading">
-        <nz-table #staffList [nzData]="staffListDataForTable" [nzScroll]="{x: '1800px'}">
+        <nz-table #staffList [nzData]="staffListDataForTable" [nzScroll]="{x: '1900px'}">
             <thead>
                 <tr>
                     <th nzWidth="100px" nzLeft>Staff ID</th>
                     <th nzWidth="160px" nzLeft>Full Name</th>
                     <th nzWidth="80px">Gender</th>
                     <th nzWidth="120px">Birthday</th>
+                    <th nzWidth="100px">Staff Type</th>
                     <th nzWidth="200px">Position</th>
                     <th nzWidth="270px">Department</th>
                     <th nzWidth="120px">Role</th>
@@ -80,6 +81,9 @@
                     <td nzLeft><b>{{ staff.fullName }}</b></td>
                     <td>{{ staff.gender === 'male' ? 'Male' : 'Female' }}</td>
                     <td>{{ staff.birthday | date:'dd MMM YYYY' }}</td>
+                    <td>
+                        <nz-tag nzColor="success">{{ getStaffTypeName(staff.staffTypeId) }}</nz-tag>
+                    </td>
                     <td>{{ getPositionName(staff.positionId) }}</td>
                     <td>{{ getDepartmentName(staff.departmentId) }}</td>
                     <td>{{ getRoleName(staff.roleId) }}</td>

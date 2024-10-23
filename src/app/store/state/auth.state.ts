@@ -21,7 +21,7 @@ export const authInitialState: AuthInfoState = {
             birthday: new Date(),
             positionId: '',
             departmentId: '',
-            staffType: '',
+            staffTypeId: '',
             roleId: '',
             email: '',
             phone: '',

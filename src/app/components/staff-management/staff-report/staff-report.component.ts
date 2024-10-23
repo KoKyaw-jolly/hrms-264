@@ -13,6 +13,8 @@ import { selectPosition } from '../../../store/selector/master/position.selector
 import { selectDepartment } from '../../../store/selector/master/department.selector';
 import { selectRole } from '../../../store/selector/master/role.selector';
 import { selectLeaveType } from '../../../store/selector/master/leave-type.selector';
+import { StaffType } from '../../../core/models/master/staff-type.interface';
+import { selectStaffType } from '../../../store/selector/master/staff-type.selector';
 
 @Component({
   selector: 'app-staff-report',
@@ -33,6 +35,7 @@ export class StaffReportComponent implements OnInit, OnDestroy {
   departmentListData: Department[] = [];
   roleListData: Role[] = [];
   leaveTypeListData: LeaveType[] = [];
+  staffTypeListData: StaffType[] = [];
   isLoading: boolean = this.staffLoading && this.loadDataLoading;
 
   //search field
@@ -71,14 +74,16 @@ export class StaffReportComponent implements OnInit, OnDestroy {
       this.store.select(selectPosition),
       this.store.select(selectDepartment),
       this.store.select(selectRole),
-      this.store.select(selectLeaveType)
+      this.store.select(selectLeaveType),
+      this.store.select(selectStaffType)
     ])
       .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(([positionRes, departmentRes, roleRes, leaveTypeRes]) => {
+      .subscribe(([positionRes, departmentRes, roleRes, leaveTypeRes, staffTypeRes]) => {
         this.positionListData = positionRes.position;
         this.departmentListData = departmentRes.department;
         this.roleListData = roleRes.role;
         this.leaveTypeListData = leaveTypeRes.leaveType;
+        this.staffTypeListData = staffTypeRes.staffType;
         this.loadDataLoading = false;
       });
   }
@@ -90,17 +95,22 @@ export class StaffReportComponent implements OnInit, OnDestroy {
 
   getPositionName(id: string): string {
     const position = this.positionListData.find(position => position.id === id);
-    return position ? position.name : '';
+    return position ? position.name : '-';
   }
 
   getRoleName(id: string): string {
     const role = this.roleListData.find(role => role.id === id);
-    return role ? role.name : '';
+    return role ? role.name : '-';
   }
 
   getLeaveTypeName(id: string): string {
     const leaveType = this.leaveTypeListData.find(leaveType => leaveType.id === id);
-    return leaveType ? leaveType.name : '';
+    return leaveType ? leaveType.name : '-';
+  }
+
+  getStaffTypeName(id: string): string {
+    const staffType = this.staffTypeListData.find(staffType => staffType.id === id);
+    return staffType ? staffType.name : '-';
   }
 
   ngOnDestroy(): void {

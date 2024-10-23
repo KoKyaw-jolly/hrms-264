@@ -45,6 +45,18 @@
                         </nz-form-control>
                     </nz-form-item>
                 </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <nz-form-item>
+                        <nz-form-label nzFor="staffType">Staff Type</nz-form-label>
+                        <nz-form-control nzErrorTip="Please select a Staff Type!">
+                            <nz-select formControlName="roleId" nzPlaceHolder="select a staff type">
+                                @for (staffType of staffTypeListData; track $index) {
+                                <nz-option [nzValue]="staffType.id" [nzLabel]="staffType.name"></nz-option>
+                                }
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">

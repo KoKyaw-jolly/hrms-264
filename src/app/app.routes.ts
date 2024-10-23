@@ -11,6 +11,7 @@ import { CustomCalendarComponent } from './share/components/custom-calendar/cust
 import { StaffCreateEditComponent } from './components/staff-management/staff-create-edit/staff-create-edit.component';
 import { StaffListComponent } from './components/staff-management/staff-list/staff-list.component';
 import { StaffReportComponent } from './components/staff-management/staff-report/staff-report.component';
+import { StaffTypeComponent } from './components/master/staff-type/staff-type.component';
 
 export const APP_ROUTES: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/login' },
@@ -24,6 +25,7 @@ export const APP_ROUTES: Routes = [
                     { path: 'department-list', component: DepartmentListComponent },
                     { path: 'position-list', component: PositionListComponent },
                     { path: 'leave-type', component: LeaveTypeComponent },
+                    { path: 'staff-type', component: StaffTypeComponent }
                 ]
             },
             {

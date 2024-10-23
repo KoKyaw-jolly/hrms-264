@@ -45,6 +45,11 @@ export const SideMenuList: Menu[] = [
                 id: "masterLeaveType",
                 name: "Leave Type",
                 routelink: "master/leave-type"
+            },
+            {
+                id: "masterStaffType",
+                name: "Staff Type",
+                routelink: "master/staff-type"
             }
         ]
     },
