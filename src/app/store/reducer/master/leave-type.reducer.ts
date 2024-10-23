@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { leaveTypeInitialState } from "../state/leave-type.state";
-import * as leaveTypeActions from '../action/leave-type.action';
+import { leaveTypeInitialState } from "../../state/master/leave-type.state";
+import * as leaveTypeActions from '../../action/master/leave-type.action';
 
 export const leaveTypeReducer = createReducer(
     leaveTypeInitialState,

@@ -5,8 +5,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/state/app.state';
 import { Subscription } from 'rxjs';
-import { selectDepartment } from '../../../store/selector/department.selector';
-import * as departmentActions from '../../../store/action/department.action';
+import { selectDepartment } from '../../../store/selector/master/department.selector';
+import * as departmentActions from '../../../store/action/master/department.action';
 import { ModalDetailsContentComponent } from '../../../share/components/modal-details-content/modal-details-content.component';
 import { NzModalService } from 'ng-zorro-antd/modal';
 

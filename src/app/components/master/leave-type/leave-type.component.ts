@@ -6,8 +6,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/state/app.state';
 import { Subscription } from 'rxjs';
-import { selectLeaveType } from '../../../store/selector/leave-type.selector';
-import * as leaveTypeActions from '../../../store/action/leave-type.action';
+import { selectLeaveType } from '../../../store/selector/master/leave-type.selector';
+import * as leaveTypeActions from '../../../store/action/master/leave-type.action';
 import { NzModalService } from 'ng-zorro-antd/modal';
 
 @Component({

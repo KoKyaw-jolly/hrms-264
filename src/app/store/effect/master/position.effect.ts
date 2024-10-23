@@ -1,10 +1,10 @@
 import { Injectable, inject } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import * as positionActions from '../action/position.action';
+import * as positionActions from '../../action/master/position.action';
 import { catchError, map, mergeMap, of } from "rxjs";
 import { NzMessageService } from "ng-zorro-antd/message";
-import { PositionService } from "../../core/services/position.service";
-import { Position } from "../../core/models/position.interface";
+import { PositionService } from "../../../core/services/position.service";
+import { Position } from "../../../core/models/position.interface";
 
 
 @Injectable()

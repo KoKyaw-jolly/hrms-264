@@ -6,10 +6,10 @@ import { SideMenuList } from '../../core/models/menu.interface';
 import { IMAGES } from '../../core/constants/images-url';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/state/app.state';
-import * as roleActions from '../../store/action/role.action';
-import * as departmentActions from '../../store/action/department.action';
-import * as positionActions from '../../store/action/position.action';
-import * as leaveTypeActions from '../../store/action/leave-type.action';
+import * as roleActions from '../../store/action/master/role.action';
+import * as departmentActions from '../../store/action/master/department.action';
+import * as positionActions from '../../store/action/master/position.action';
+import * as leaveTypeActions from '../../store/action/master/leave-type.action';
 import * as holidayActions from '../../store/action/holiday.action';
 import * as staffActions from '../../store/action/staff.action';
 

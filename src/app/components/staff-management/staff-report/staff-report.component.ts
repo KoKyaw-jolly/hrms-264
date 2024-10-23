@@ -9,10 +9,10 @@ import { Department } from '../../../core/models/department.interface';
 import { Role } from '../../../core/models/role.interface';
 import { LeaveType } from '../../../core/models/leave-type.interface';
 import { selectStaffLoading } from '../../../store/selector/staff.selector';
-import { selectPosition } from '../../../store/selector/position.selector';
-import { selectDepartment } from '../../../store/selector/department.selector';
-import { selectRole } from '../../../store/selector/role.selector';
-import { selectLeaveType } from '../../../store/selector/leave-type.selector';
+import { selectPosition } from '../../../store/selector/master/position.selector';
+import { selectDepartment } from '../../../store/selector/master/department.selector';
+import { selectRole } from '../../../store/selector/master/role.selector';
+import { selectLeaveType } from '../../../store/selector/master/leave-type.selector';
 
 @Component({
   selector: 'app-staff-report',

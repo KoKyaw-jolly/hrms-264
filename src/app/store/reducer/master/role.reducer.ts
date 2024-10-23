@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { roleInitialState } from "../state/role.state";
-import * as roleActions from '../action/role.action';
+import { roleInitialState } from "../../state/master/role.state";
+import * as roleActions from '../../action/master/role.action';
 
 export const roleReducer = createReducer(
     roleInitialState,

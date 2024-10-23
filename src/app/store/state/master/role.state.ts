@@ -1,4 +1,4 @@
-import { Role } from "../../core/models/role.interface";
+import { Role } from "../../../core/models/role.interface";
 
 export interface RoleState {
     role: Role[];

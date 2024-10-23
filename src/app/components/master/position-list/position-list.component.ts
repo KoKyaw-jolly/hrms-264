@@ -4,11 +4,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/state/app.state';
 import { Subscription } from 'rxjs';
-import * as positionActions from '../../../store/action/position.action';
-import { selectPosition } from '../../../store/selector/position.selector';
+import * as positionActions from '../../../store/action/master/position.action';
+import { selectPosition } from '../../../store/selector/master/position.selector';
 import { APP_IMPORT } from '../../../app.import';
 import { ModalDetailsContentComponent } from '../../../share/components/modal-details-content/modal-details-content.component';
-import { selectDepartment } from '../../../store/selector/department.selector';
+import { selectDepartment } from '../../../store/selector/master/department.selector';
 import { Department } from '../../../core/models/department.interface';
 import { NzModalService } from 'ng-zorro-antd/modal';
 

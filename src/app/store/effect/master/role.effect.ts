@@ -1,10 +1,10 @@
 import { Injectable, inject } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import * as roleActions from '../action/role.action';
+import * as roleActions from '../../action/master/role.action';
 import { catchError, map, mergeMap, of } from "rxjs";
 import { NzMessageService } from "ng-zorro-antd/message";
-import { RoleService } from "../../core/services/role.service";
-import { Role } from "../../core/models/role.interface";
+import { RoleService } from "../../../core/services/role.service";
+import { Role } from "../../../core/models/role.interface";
 
 
 @Injectable()

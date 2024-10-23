@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { positionInitialState } from "../state/position.state";
-import * as positionActions from '../action/position.action';
+import { positionInitialState } from "../../state/master/position.state";
+import * as positionActions from '../../action/master/position.action';
 
 export const positionReducer = createReducer(
     positionInitialState,

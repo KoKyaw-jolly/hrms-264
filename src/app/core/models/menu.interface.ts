@@ -24,7 +24,7 @@ export const SideMenuList: Menu[] = [
         id: "master",
         name: "Master",
         icon: "fi fi-rr-document",
-        routelink: "",
+        routelink: "master",
         sibmenuItems: [
             {
                 id: "masterRoleList",
@@ -81,6 +81,19 @@ export const SideMenuList: Menu[] = [
                 id: "attendanceManagementReport",
                 name: "Attendance Report",
                 routelink: "attendance-management/attendance-report"
+            }
+        ]
+    },
+    {
+        id: "leaveManagement",
+        name: "Leave Management",
+        icon: "fi fi-rr-calendar-xmark",
+        routelink: "",
+        sibmenuItems: [
+            {
+                id: "leaveManagementRequest",
+                name: "Leave Request",
+                routelink: "leave-management/leave-request"
             }
         ]
     },

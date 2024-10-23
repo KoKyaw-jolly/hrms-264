@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { LeaveType } from "../../core/models/leave-type.interface";
+import { LeaveType } from "../../../core/models/leave-type.interface";
 
 export const loadLeaveType = createAction('[Leave Type] Load leave type');
 export const loadLeaveTypeSuccess = createAction('[Leave Type] Load leave type success', props<{ leaveType: LeaveType[] }>());

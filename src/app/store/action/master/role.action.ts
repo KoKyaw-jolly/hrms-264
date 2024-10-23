@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Role } from "../../core/models/role.interface";
+import { Role } from "../../../core/models/role.interface";
 
 export const loadRole = createAction('[Role] Load role');
 export const loadRoleSuccess = createAction('[Role] Load role success', props<{ role: Role[] }>());

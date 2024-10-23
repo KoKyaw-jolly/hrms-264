@@ -14,6 +14,7 @@ export interface Staff {
     birthday: Date;
     positionId: string;
     departmentId: string;
+    staffType: string;
     roleId: string;
     email: string;
     phone: string;
@@ -30,6 +31,7 @@ export const staffEmptyInitialObj: Staff = {
     birthday: new Date(),
     positionId: '',
     departmentId: '',
+    staffType: '',
     roleId: '',
     email: '',
     phone: '',

@@ -1,3 +1,3 @@
-import { AppState } from "../state/app.state";
+import { AppState } from "../../state/app.state";
 
 export const selectRole = (state: AppState) => state.role;

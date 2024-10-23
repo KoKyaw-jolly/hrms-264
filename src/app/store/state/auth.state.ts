@@ -21,10 +21,11 @@ export const authInitialState: AuthInfoState = {
             birthday: new Date(),
             positionId: '',
             departmentId: '',
+            staffType: '',
+            roleId: '',
             email: '',
             phone: '',
             address: '',
-            roleId: '',
             leaveBalance: []
         }
     },

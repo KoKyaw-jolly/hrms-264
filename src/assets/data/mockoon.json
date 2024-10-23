@@ -92,10 +92,6 @@
         {
           "type": "route",
           "uuid": "af0a592f-9f86-4194-9a64-0d50c05958ce"
-        },
-        {
-          "type": "folder",
-          "uuid": "97540ec0-9954-4ad0-adc3-f0f894b52e72"
         }
       ]
     },
@@ -290,7 +286,7 @@
       "responses": [
         {
           "uuid": "3a825bf2-ddb5-4e59-8833-f20c112aab15",
-          "body": "{\n        \"staffId\": 1,\n        \"fullName\": \"John Doe\",\n        \"image\": \"sample.png\",\n        \"email\": \"john.doe@example.com\",\n        \"phone\": \"123-456-7890\",\n        \"address\": \"123 Main St, Cityville, CA 12345\",\n        \"position\": \"Software Engineer\",\n        \"department\": \"Engineering\",\n        \"role\": \"Staff\",\n        \"leaveBalance\": [\n            {\n                \"leaveType\": \"Annual\",\n                \"totalDays\": 15,\n                \"remainingDays\": 10\n            },\n            {\n                \"leaveType\": \"OffInLieu\",\n                \"totalDays\": 5,\n                \"remainingDays\": 5\n            },\n            {\n                \"leaveType\": \"Medical\",\n                \"totalDays\": 10,\n                \"remainingDays\": 8\n            }\n        ]\n    }",
+          "body": "{\n        \"id\": \"3\",\n        \"staffId\": \"S03\",\n        \"fullName\": \"Nicholas Taylor\",\n        \"image\": \"https://randomuser.me/api/portraits/men/71.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1996-05-01\",\n        \"positionId\": \"6\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s03@company.com\",\n        \"phone\": \"+1-324-7630\",\n        \"address\": \"976 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 12\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 4\n            },\n        ]\n    }",
           "latency": 1500,
           "statusCode": 200,
           "label": "",
@@ -2130,6 +2126,10 @@
     }
   ],
   "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "97540ec0-9954-4ad0-adc3-f0f894b52e72"
+    },
     {
       "type": "folder",
       "uuid": "3209f21a-59ec-4c93-9008-9e916fefe83d"

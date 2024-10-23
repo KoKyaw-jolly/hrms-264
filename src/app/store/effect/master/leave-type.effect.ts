@@ -1,10 +1,10 @@
 import { Injectable, inject } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import * as leaveTypeActions from '../action/leave-type.action';
+import * as leaveTypeActions from '../../action/master/leave-type.action';
 import { catchError, map, mergeMap, of } from "rxjs";
 import { NzMessageService } from "ng-zorro-antd/message";
-import { LeaveTypeService } from "../../core/services/leave-type.service";
-import { LeaveType } from "../../core/models/leave-type.interface";
+import { LeaveTypeService } from "../../../core/services/leave-type.service";
+import { LeaveType } from "../../../core/models/leave-type.interface";
 
 
 @Injectable()

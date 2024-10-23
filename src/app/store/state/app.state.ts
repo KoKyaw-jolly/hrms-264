@@ -1,9 +1,9 @@
 import { AuthInfoState } from "./auth.state";
-import { DepartmentState } from "./department.state";
+import { DepartmentState } from "./master/department.state";
 import { HolidayState } from "./holiday.state";
-import { LeaveTypeState } from "./leave-type.state";
-import { PositionState } from "./position.state";
-import { RoleState } from "./role.state";
+import { LeaveTypeState } from "./master/leave-type.state";
+import { PositionState } from "./master/position.state";
+import { RoleState } from "./master/role.state";
 import { StaffState } from "./staff.state";
 
 

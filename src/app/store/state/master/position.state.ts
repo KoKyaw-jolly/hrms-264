@@ -1,4 +1,4 @@
-import { Position } from "../../core/models/position.interface";
+import { Position } from "../../../core/models/position.interface";
 
 export interface PositionState {
     position: Position[];
