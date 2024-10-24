@@ -12,6 +12,7 @@ import { StaffCreateEditComponent } from './components/staff-management/staff-cr
 import { StaffListComponent } from './components/staff-management/staff-list/staff-list.component';
 import { StaffReportComponent } from './components/staff-management/staff-report/staff-report.component';
 import { StaffTypeComponent } from './components/master/staff-type/staff-type.component';
+import { LeaveRequestComponent } from './components/leave-management/leave-request/leave-request.component';
 
 export const APP_ROUTES: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/login' },
@@ -37,6 +38,11 @@ export const APP_ROUTES: Routes = [
                     },
                     { path: 'staff-create', component: StaffCreateEditComponent },
                     { path: 'staff-report', component: StaffReportComponent },
+                ]
+            },
+            {
+                path: 'leave-management', children: [
+                    { path: 'leave-request', component: LeaveRequestComponent }
                 ]
             },
             {

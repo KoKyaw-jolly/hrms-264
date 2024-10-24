@@ -1,0 +1,26 @@
+@if(leaveBalanceList.length == 0) {
+<div class="leave-balance-wrapper">
+    <div class="no-leave-balance-card">
+        <span>You have no leave balance</span>
+    </div>
+</div>
+} @else {
+<div class="leave-balance-wrapper">
+    @for (leaveBalance of leaveBalanceList; track $index) {
+    <div class="leave-balance-card">
+        <h4 nz-typography>{{getLeaveType(leaveBalance.leaveTypeId)}}</h4>
+        <h1 nz-typography>{{leaveBalance.leaveRemaining}}</h1>
+        <span class="text">days remain for {{today | date:'yyyy'}}</span>
+    </div>
+    }
+</div>
+}
+
+<!-- @if (loading) {
+<div class="leave-balance-wrapper">
+    <div class="no-leave-balance-card">
+        <nz-skeleton-element nzType="input" [nzActive]="true" [nzSize]="'large'"
+            style="width:100%"></nz-skeleton-element>
+    </div>
+</div>
+} -->

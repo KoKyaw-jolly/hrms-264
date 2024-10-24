@@ -312,7 +312,7 @@
       "responses": [
         {
           "uuid": "3a825bf2-ddb5-4e59-8833-f20c112aab15",
-          "body": "{\n        \"id\": \"3\",\n        \"staffId\": \"S03\",\n        \"fullName\": \"Nicholas Taylor\",\n        \"image\": \"https://randomuser.me/api/portraits/men/71.jpg\",\n        \"gender\": \"male\",\n        \"birthday\": \"1996-05-01\",\n        \"positionId\": \"6\",\n        \"departmentId\": \"2\",\n        \"roleId\": \"3\",\n        \"email\": \"s03@company.com\",\n        \"phone\": \"+1-324-7630\",\n        \"address\": \"976 Main St, City, Country\",\n        \"leaveBalance\": [\n            {\n                \"leaveTypeId\": \"1\",\n                \"leaveBalance\": 10,\n                \"leaveTaken\": 5,\n                \"leaveRemaining\": 5\n            },\n            {\n                \"leaveTypeId\": \"2\",\n                \"leaveBalance\": 15,\n                \"leaveTaken\": 3,\n                \"leaveRemaining\": 12\n            },\n            {\n                \"leaveTypeId\": \"3\",\n                \"leaveBalance\": 5,\n                \"leaveTaken\": 1,\n                \"leaveRemaining\": 4\n            },\n        ]\n    }",
+          "body": "{\n  \"id\": \"1\",\n  \"staffId\": \"S01\",\n  \"fullName\": \"Chris Martin\",\n  \"image\": \"https://randomuser.me/api/portraits/women/33.jpg\",\n  \"gender\": \"female\",\n  \"birthday\": \"2001-07-01\",\n  \"positionId\": \"8\",\n  \"departmentId\": \"7\",\n  \"staffTypeId\": \"1\",\n  \"roleId\": \"2\",\n  \"email\": \"s01@company.com\",\n  \"phone\": \"+1-583-6319\",\n  \"address\": \"808 Main St, City, Country\",\n  \"leaveBalance\": [\n    {\n      \"leaveTypeId\": \"1\",\n      \"leaveBalance\": 10,\n      \"leaveTaken\": 3,\n      \"leaveRemaining\": 9\n    },\n    {\n      \"leaveTypeId\": \"2\",\n      \"leaveBalance\": 15,\n      \"leaveTaken\": 15,\n      \"leaveRemaining\": 15\n    },\n    {\n      \"leaveTypeId\": \"3\",\n      \"leaveBalance\": 5,\n      \"leaveTaken\": 3,\n      \"leaveRemaining\": 2\n    },\n    {\n      \"leaveTypeId\": \"4\",\n      \"leaveBalance\": 0,\n      \"leaveTaken\": 0,\n      \"leaveRemaining\": 0\n    }\n  ]\n}",
           "latency": 1500,
           "statusCode": 200,
           "label": "",
@@ -485,7 +485,7 @@
       "type": "http",
       "documentation": "",
       "method": "post",
-      "endpoint": "api/leave/apply-leave",
+      "endpoint": "api/leaves/apply-leave",
       "responses": [
         {
           "uuid": "f551a69f-4b4c-4dee-8000-403b0a60cc66",
@@ -550,7 +550,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "api/leave/leave-records/all-leave-records",
+      "endpoint": "api/leaves/leave-records/all-leave-record",
       "responses": [
         {
           "uuid": "d037d764-6260-4a22-b107-1b0041d04bfb",
@@ -607,7 +607,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "api/leave/leave-records/user-leave-records",
+      "endpoint": "api/leaves/leave-record/1",
       "responses": [
         {
           "uuid": "0a5d71bb-f5bc-4e39-9ced-46f999a1610c",
@@ -1758,8 +1758,8 @@
       "responses": [
         {
           "uuid": "fe68bf91-2f0e-4f3b-b479-9ec8d14397ff",
-          "body": "[\n  {\n    \"id\": \"1\",\n    \"name\": \"Annual Leave\",\n    \"description\": \"Paid leave granted to employees for personal time off or vacations.\",\n    \"allowDaysPerYear\": 10\n  },\n  {\n    \"id\": \"2\",\n    \"name\": \"Medical Leave (Sick Leave)\",\n    \"description\": \"Leave granted for recovery during illness or medical treatment.\",\n    \"allowDaysPerYear\": 15\n  },\n  {\n    \"id\": \"3\",\n    \"name\": \"Casual Leave\",\n    \"description\": \"Short-term leave for personal reasons or emergencies.\",\n    \"allowDaysPerYear\": 5\n  },\n  {\n    \"id\": \"4\",\n    \"name\": \"Unpaid Leave\",\n    \"description\": \"Leave taken without pay when paid leave is exhausted or in special situations.\",\n    \"allowDaysPerYear\": 0\n  }\n]",
-          "latency": 1000,
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"name\": \"Annual Leave\",\n    \"description\": \"Paid leave granted to employees for personal time off or vacations.\",\n    \"allowDaysPerYear\": 10\n  },\n  {\n    \"id\": \"2\",\n    \"name\": \"Medical Leave\",\n    \"description\": \"Leave granted for recovery during illness or medical treatment.\",\n    \"allowDaysPerYear\": 15\n  },\n  {\n    \"id\": \"3\",\n    \"name\": \"Casual Leave\",\n    \"description\": \"Short-term leave for personal reasons or emergencies.\",\n    \"allowDaysPerYear\": 5\n  },\n  {\n    \"id\": \"4\",\n    \"name\": \"Unpaid Leave\",\n    \"description\": \"Leave taken without pay when paid leave is exhausted or in special situations.\",\n    \"allowDaysPerYear\": 0\n  }\n]",
+          "latency": 1500,
           "statusCode": 200,
           "label": "",
           "headers": [

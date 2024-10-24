@@ -49,7 +49,7 @@
                     <nz-form-item>
                         <nz-form-label nzFor="staffType">Staff Type</nz-form-label>
                         <nz-form-control nzErrorTip="Please select a Staff Type!">
-                            <nz-select formControlName="roleId" nzPlaceHolder="select a staff type">
+                            <nz-select formControlName="staffTypeId" nzPlaceHolder="select a staff type">
                                 @for (staffType of staffTypeListData; track $index) {
                                 <nz-option [nzValue]="staffType.id" [nzLabel]="staffType.name"></nz-option>
                                 }

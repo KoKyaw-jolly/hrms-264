@@ -29,6 +29,8 @@ import { staffReducer } from './store/reducer/staff.reducer';
 import { StaffEffect } from './store/effect/staff.effect';
 import { staffTypeReducer } from './store/reducer/master/staff-type.reducer';
 import { StaffTypeEffect } from './store/effect/master/staff-type.effect';
+import { leaveReducer } from './store/reducer/leave.reducer';
+import { LeaveEffect } from './store/effect/leave.effect';
 
 registerLocaleData(en);
 
@@ -50,7 +52,8 @@ export const appConfig: ApplicationConfig = {
           leaveType: leaveTypeReducer,
           holiday: holidayReducer,
           staff: staffReducer,
-          staffType: staffTypeReducer
+          staffType: staffTypeReducer,
+          leave: leaveReducer
         },
         {
           metaReducers,
@@ -68,7 +71,8 @@ export const appConfig: ApplicationConfig = {
         LeaveTypeEffect,
         HolidayEffect,
         StaffEffect,
-        StaffTypeEffect
+        StaffTypeEffect,
+        LeaveEffect
       ]),
       StoreDevtoolsModule.instrument()
     )

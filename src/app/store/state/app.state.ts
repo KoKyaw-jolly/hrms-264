@@ -6,6 +6,7 @@ import { PositionState } from "./master/position.state";
 import { RoleState } from "./master/role.state";
 import { StaffState } from "./staff.state";
 import { StaffTypeState } from "./master/staff-type.state";
+import { LeaveState } from "./leave.state";
 
 
 
@@ -18,4 +19,5 @@ export interface AppState {
     holiday: HolidayState;
     staff: StaffState;
     staffType: StaffTypeState;
+    leave: LeaveState;
 }

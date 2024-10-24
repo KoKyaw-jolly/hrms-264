@@ -17,6 +17,7 @@ import { holidayInitialState } from "../state/holiday.state";
 import { staffInitialState } from "../state/staff.state";
 import { staffReducer } from "./staff.reducer";
 import { staffTypeInitialState } from "../state/master/staff-type.state";
+import { leaveInitialState } from "../state/leave.state";
 
 // export const appReducer: ActionReducerMap<AppState> = {
 //     role: roleReducer,
@@ -41,7 +42,8 @@ const localStorageConfig: LocalStorageConfig = {
         'leaveType',
         'holiday',
         'staff',
-        'staffType'
+        'staffType',
+        'leave'
     ]
 }
 
@@ -58,7 +60,8 @@ export function clearState(reducer: ActionReducer<AppState>): ActionReducer<AppS
                 leaveType: leaveTypeInitialState,
                 holiday: holidayInitialState,
                 staff: staffInitialState,
-                staffType: staffTypeInitialState
+                staffType: staffTypeInitialState,
+                leave: leaveInitialState
             }
         }
         return reducer(state, action);

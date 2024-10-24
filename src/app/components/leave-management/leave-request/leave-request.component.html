@@ -1,1 +1,66 @@
-<p>leave-request works!</p>
+<app-leave-balance-summary></app-leave-balance-summary>
+
+<div class="main-card-wrapper">
+    <div>
+        <h4 nz-typography>Leave Request</h4>
+        <!-- <p nz-typography nzType="secondary">Organize holidays and manage prefix Holiday for staff efficiently.</p>         -->
+    </div>
+    <nz-spin nzTip="Loading..." [nzSpinning]="leaveRequestLoading">
+        <form nz-form [nzLayout]="'vertical'" [formGroup]="leaveRequestForm">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <nz-form-item>
+                        <nz-form-label nzRequired>Leave Type</nz-form-label>
+                        <nz-form-control nzErrorTip="please select leave type!">
+                            <nz-select name="Leave Type" nzShowSearch formControlName="leaveType"
+                                nzPlaceHolder="Select Leave Type">
+                                @for (item of leaveTypeListData; track $index) {
+                                    <nz-option [nzValue]="item.id" [nzLabel]="item.name"></nz-option>
+                                }
+                                <!-- <nz-option nzValue="Annual Leave" nzLabel="Annual Leave"></nz-option>
+                                <nz-option nzValue="Unpaid Leave" nzLabel="Unpaid Leave"></nz-option>
+                                <nz-option nzValue="Medical Leave" nzLabel="Medical Leave"></nz-option> -->
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <nz-form-item>
+                        <nz-form-label nzRequired>Date Range</nz-form-label>
+                        <nz-form-control nzErrorTip="please select date range!">
+                            <nz-range-picker formControlName="dateRange" (ngModelChange)="dateRangeOnChange($event)"
+                                name="Date Range" class="w100"></nz-range-picker>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <nz-form-item>
+                        <nz-form-label>Total Days</nz-form-label>
+                        <div class="custom-readonly-input" name="Total Days">{{totalLeaveDays}}</div>
+                    </nz-form-item>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <nz-form-item>
+                        <nz-form-label>Contact Number<span class="label-small">(during absent
+                                period)</span></nz-form-label>
+                        <nz-form-control>
+                            <input nz-input name="Contact Number" type="text" formControlName="phone" />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                    <nz-form-item>
+                        <nz-form-label nzRequired>Reason<span class="label-small">(during absent
+                                period)</span></nz-form-label>
+                        <nz-form-control nzErrorTip="please enter your reason!">
+                            <textarea nz-input name="Reason" formControlName="reason"></textarea>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button nz-button nzType="primary" [nzLoading]="leaveRequestLoading" (click)="onSubmit()">Submit</button>
+                </div>
+            </div>
+        </form>
+    </nz-spin>
+</div>

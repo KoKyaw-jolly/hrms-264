@@ -143,6 +143,7 @@ export class StaffCreateEditComponent implements OnInit, OnDestroy {
   }
 
   createEditStaff(): void {
+    console.log('kkk',this.staffForm.invalid)
     if (this.staffForm.invalid) {
       Object.values(this.staffForm.controls).forEach(control => {
         if (control.invalid) {
