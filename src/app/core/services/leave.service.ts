@@ -12,12 +12,8 @@ export class LeaveService {
 
   constructor(private http: HttpClient) { }
 
-  applyLeavea(leaveRecord: LeaveRecord): Observable<LeaveRecord> {
-    return this.http.post<LeaveRecord>('http://localhost:3200/api/leave/apply-leave', leaveRecord);
-  }
   //apply leave
-
-  applyLeave(leaveRecord: LeaveRecord): Observable<LeaveRecord> {
+  applyLeave(leaveRecord: LeaveRecord): Observable<any> {
     return this.http.post<LeaveRecord>(`${this.apiUrl}/apply-leave`, leaveRecord).pipe(
       catchError(error => {
         console.error('Error:', error);
@@ -55,11 +51,21 @@ export class LeaveService {
   //   return this.http.get<any[]>('http://localhost:3200/api/leave/leave-calendar/all');
   // }
 
-  // approveRejectLeave(leaveRecord: LeaveRecord, approveRejectStatus: string): Observable<LeaveRecord> {
-  //   if (approveRejectStatus === 'approve') {
-  //     return this.http.post<LeaveRecord>('http://localhost:3200/api/leave/apporve-reject-leave', leaveRecord);
-  //   } else {
-  //     return this.http.post<LeaveRecord>('http://localhost:3200/api/leave/apporve-reject-leave', leaveRecord);
-  //   }
-  // }
+  approveLeave(leaveRecordId: string): Observable<any> {
+    return this.http.post<LeaveRecord[]>(`${this.apiUrl}/approve-leave`, { leaveRecordId: leaveRecordId }).pipe(
+      catchError(error => {
+        console.error('Error:', error);
+        return throwError(() => new Error('Failed to approve leave record'));
+      })
+    );
+  }
+
+  rejectLeave(leaveRecordId: string): Observable<any> {
+    return this.http.post<LeaveRecord[]>(`${this.apiUrl}/reject-leave`, { leaveRecordId: leaveRecordId }).pipe(
+      catchError(error => {
+        console.error('Error:', error);
+        return throwError(() => new Error('Failed to reject leave record'));
+      })
+    );
+  }
 }

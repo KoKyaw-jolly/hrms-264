@@ -83,26 +83,45 @@ export class LeaveEffect {
     //     )
     // );
 
-    // approveRejectLeave$ = createEffect(() =>
-    //     this.actions.pipe(
-    //         ofType(leaveAction.approveRejectLeave),
-    //         mergeMap((action) => {
-    //             return this.leaveService.approveRejectLeave(action.leaveRecord, action.approveRejectStatus).pipe(
-    //                 map((action: any) => {
-    //                     const resMsg = action.msg ? action.msg : 'Approve or Reject Successfully!';
-    //                     this.message.create('success', resMsg);
-    //                     return leaveAction.approveRejectLeaveSuccess({ msg: resMsg });
-    //                 }),
-    //                 catchError(error => {
-    //                     const resErr = error.message ? error.message : 'Something went wrong!';
-    //                     this.message.create('error', resErr);
-    //                     return of(leaveAction.approveRejectLeaveFail({ error: resErr }))
-    //                 })
-    //             )
-    //         })
-    //     )
-    // )
+    approveLeave$ = createEffect(() =>
+        this.actions.pipe(
+            ofType(leaveAction.approveLeave),
+            mergeMap((action) => {
+                return this.leaveService.approveLeave(action.leaveRecordId).pipe(
+                    map((action: any) => {
+                        const resMsg = action.msg ? action.msg : 'Approve or Reject Successfully!';
+                        this.message.create('success', resMsg);
+                        return leaveAction.approveLeaveSuccess({ msg: resMsg });
+                    }),
+                    catchError(error => {
+                        const resErr = error.message ? error.message : 'Something went wrong!';
+                        this.message.create('error', resErr);
+                        return of(leaveAction.approveLeaveFail({ error: resErr }))
+                    })
+                )
+            })
+        )
+    )
 
+    rejectLeave$ = createEffect(() =>
+        this.actions.pipe(
+            ofType(leaveAction.rejectLeave),
+            mergeMap((action) => {
+                return this.leaveService.rejectLeave(action.leaveRecordId).pipe(
+                    map((action: any) => {
+                        const resMsg = action.msg ? action.msg : 'Approve or Reject Successfully!';
+                        this.message.create('success', resMsg);
+                        return leaveAction.rejectLeaveSuccess({ msg: resMsg });
+                    }),
+                    catchError(error => {
+                        const resErr = error.message ? error.message : 'Something went wrong!';
+                        this.message.create('error', resErr);
+                        return of(leaveAction.rejectLeaveFail({ error: resErr }))
+                    })
+                )
+            })
+        )
+    )
 
     loadLeaveAfterCUDSuccess$ = createEffect(() =>
         this.actions.pipe(

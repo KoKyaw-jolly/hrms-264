@@ -74,3 +74,13 @@ p {
   align-items: center;
   cursor: not-allowed;
 }
+
+//button
+.form-control-button{
+  padding-top: 30px;
+}
+
+.readonly-section {
+  pointer-events: none;
+  opacity: 0.5;
+}

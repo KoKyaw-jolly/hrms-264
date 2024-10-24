@@ -1,9 +1,8 @@
 export interface LeaveRecord {
-  id: String;
-  staffId: String;
-  fullName: String;
+  id: string;
+  staffId: string;
   applyDate: Date;
-  leaveType: string;
+  leaveTypeId: string;
   takenDays: number;
   startDate: Date;
   endDate: Date;
@@ -21,9 +20,8 @@ export interface LeaveRecord {
 export const leaveRecordEmptyInitialObj : LeaveRecord = {
   id: '',
   staffId: '',
-  fullName: '',
   applyDate: new Date(),
-  leaveType: 'Annual',
+  leaveTypeId: '',
   takenDays: 0,
   startDate: new Date(),
   endDate: new Date(),

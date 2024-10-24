@@ -14,7 +14,7 @@ import * as leaveActions from '../../../store/action/leave.action';
 import { selectLeave } from '../../../store/selector/leave.selector';
 
 @Component({
-  selector: 'app-leave-request',
+  selector: 'app-leave-list',
   standalone: true,
   imports: [
     APP_IMPORT,
@@ -98,9 +98,9 @@ export class LeaveRequestComponent implements OnInit, OnDestroy {
       const applyLeaveData: LeaveRecord = {
         id: '',
         staffId: this.userInfo.staffId,
-        fullName: this.userInfo.fullName,
+        // fullName: this.userInfo.fullName,
         applyDate: new Date(),
-        leaveType: this.leaveRequestForm.get('leaveType')?.value || '',
+        leaveTypeId: this.leaveRequestForm.get('leaveType')?.value || '',
         takenDays: this.totalLeaveDays,
         startDate: this.leaveRequestForm.get('dateRange')?.value[0] || '',
         endDate: this.leaveRequestForm.get('dateRange')?.value[1] || '',

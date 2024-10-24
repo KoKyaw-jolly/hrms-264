@@ -13,6 +13,7 @@ import * as leaveTypeActions from '../../store/action/master/leave-type.action';
 import * as holidayActions from '../../store/action/holiday.action';
 import * as staffActions from '../../store/action/staff.action';
 import * as staffTypeActions from '../../store/action/master/staff-type.action';
+import * as leaveActions from '../../store/action/leave.action';
 
 @Component({
   selector: 'app-main-layout',
@@ -44,6 +45,7 @@ export class MainLayoutComponent implements OnInit {
     this.store.dispatch(holidayActions.loadHoliday());
     this.store.dispatch(staffActions.loadStaff());
     this.store.dispatch(staffTypeActions.loadStaffType());
+    this.store.dispatch(leaveActions.loadLeaveRecordsAll());
   }
 
 }

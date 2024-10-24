@@ -57,15 +57,11 @@
         },
         {
           "type": "route",
-          "uuid": "47d93011-a6f0-4efb-b272-bcc20f3908e0"
-        },
-        {
-          "type": "route",
-          "uuid": "fbe94414-cd39-4048-8780-fa8b77a292e4"
-        },
-        {
-          "type": "route",
           "uuid": "cba66822-b9c3-444c-aff7-2631046c37b2"
+        },
+        {
+          "type": "route",
+          "uuid": "2b6dc269-f18f-4595-98ff-438f66273781"
         }
       ]
     },
@@ -554,7 +550,7 @@
       "responses": [
         {
           "uuid": "d037d764-6260-4a22-b107-1b0041d04bfb",
-          "body": "[\n  {\n    \"id\": \"1\",\n    \"staffId\": \"1\",\n    \"fullName\": \"Ko Ko Kyaw\",\n    \"applyDate\": \"2024-07-01\",\n    \"leaveType\": \"Off-In-Lieu\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-07-01\",\n    \"endDate\": \"2024-07-03\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I need to take a day off to compensate for working on a public holiday.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"2\",\n    \"staffId\": \"1\",\n    \"fullName\": \"Ko Ko Kyaw\",\n    \"applyDate\": \"2024-08-01\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-08-04\",\n    \"endDate\": \"2024-08-06\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I need medical leave to recover from a minor surgery I have undergone.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"3\",\n    \"staffId\": \"1\",\n    \"fullName\": \"Ko Ko Kyaw\",\n    \"applyDate\": \"2024-09-01\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 5,\n    \"startDate\": \"2024-09-10\",\n    \"endDate\": \"2024-09-14\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I'm planning a trip with my family for a few days to relax and unwind.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"4\",\n    \"staffId\": \"2\",\n    \"fullName\": \"Aung Aung\",\n    \"applyDate\": \"2024-07-05\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-07-10\",\n    \"endDate\": \"2024-07-11\",\n    \"phoneDuringLeave\": \"0912334235\",\n    \"reason\": \"I have a family event that requires my presence for two days.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"5\",\n    \"staffId\": \"3\",\n    \"fullName\": \"Thiri Thiri\",\n    \"applyDate\": \"2024-07-08\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-07-15\",\n    \"endDate\": \"2024-07-17\",\n    \"phoneDuringLeave\": \"0912334236\",\n    \"reason\": \"I have a medical condition that requires immediate attention and rest.\",\n    \"leaveStatus\": \"Rejected\"\n  },\n  {\n    \"id\": \"6\",\n    \"staffId\": \"4\",\n    \"fullName\": \"Mya Mya\",\n    \"applyDate\": \"2024-07-12\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 5,\n    \"startDate\": \"2024-07-20\",\n    \"endDate\": \"2024-07-24\",\n    \"phoneDuringLeave\": \"0912334237\",\n    \"reason\": \"I am planning a vacation with my family and need time off to travel and rest.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"7\",\n    \"staffId\": \"5\",\n    \"fullName\": \"Zaw Zaw\",\n    \"applyDate\": \"2024-07-18\",\n    \"leaveType\": \"Unpaid Leave\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-07-19\",\n    \"endDate\": \"2024-07-19\",\n    \"phoneDuringLeave\": \"0912334238\",\n    \"reason\": \"I need to attend a personal event that is important and cannot be rescheduled.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"8\",\n    \"staffId\": \"6\",\n    \"fullName\": \"Hla Hla\",\n    \"applyDate\": \"2024-07-22\",\n    \"leaveType\": \"Off-In-Lieu\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-07-25\",\n    \"endDate\": \"2024-07-26\",\n    \"phoneDuringLeave\": \"0912334239\",\n    \"reason\": \"I worked extra hours last week and need time off to recover and balance work-life.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"9\",\n    \"staffId\": \"7\",\n    \"fullName\": \"Moe Moe\",\n    \"applyDate\": \"2024-07-25\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 4,\n    \"startDate\": \"2024-07-29\",\n    \"endDate\": \"2024-08-01\",\n    \"phoneDuringLeave\": \"0912334240\",\n    \"reason\": \"I have planned a family trip for relaxation and to spend quality time with loved ones.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"10\",\n    \"staffId\": \"8\",\n    \"fullName\": \"Kyaw Kyaw\",\n    \"applyDate\": \"2024-07-29\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-08-01\",\n    \"endDate\": \"2024-08-02\",\n    \"phoneDuringLeave\": \"0912334241\",\n    \"reason\": \"I have a scheduled doctor's appointment and need time to recover after treatment.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"11\",\n    \"staffId\": \"9\",\n    \"fullName\": \"Soe Soe\",\n    \"applyDate\": \"2024-08-05\",\n    \"leaveType\": \"Unpaid Leave\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-08-06\",\n    \"endDate\": \"2024-08-06\",\n    \"phoneDuringLeave\": \"0912334242\",\n    \"reason\": \"I have an urgent personal matter that requires my immediate attention.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"12\",\n    \"staffId\": \"10\",\n    \"fullName\": \"Nyein Nyein\",\n    \"applyDate\": \"2024-08-08\",\n    \"leaveType\": \"Off-In-Lieu\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-08-10\",\n    \"endDate\": \"2024-08-10\",\n    \"phoneDuringLeave\": \"0912334243\",\n    \"reason\": \"I worked during a public holiday and need to take compensatory leave to rest.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"13\",\n    \"staffId\": \"2\",\n    \"fullName\": \"Aung Aung\",\n    \"applyDate\": \"2024-09-01\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-09-03\",\n    \"endDate\": \"2024-09-04\",\n    \"phoneDuringLeave\": \"0912334235\",\n    \"reason\": \"I need to visit the doctor for a scheduled check-up and rest afterwards.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"14\",\n    \"staffId\": \"3\",\n    \"fullName\": \"Thiri Thiri\",\n    \"applyDate\": \"2024-09-05\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-09-10\",\n    \"endDate\": \"2024-09-12\",\n    \"phoneDuringLeave\": \"0912334236\",\n    \"reason\": \"I need to attend a family gathering that is scheduled for several days.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"15\",\n    \"staffId\": \"5\",\n    \"fullName\": \"Zaw Zaw\",\n    \"applyDate\": \"2024-09-07\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 4,\n    \"startDate\": \"2024-09-11\",\n    \"endDate\": \"2024-09-14\",\n    \"phoneDuringLeave\": \"0912334238\",\n    \"reason\": \"I'm planning a trip to visit relatives and need time off for travel and relaxation.\",\n    \"leaveStatus\": \"Approved\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"staffId\": \"1\",\n    \"applyDate\": \"2024-07-01\",\n    \"leaveTypeId\": \"1\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-07-01\",\n    \"endDate\": \"2024-07-03\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I need to take a day off to compensate for working on a public holiday.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"2\",\n    \"staffId\": \"1\",\n    \"applyDate\": \"2024-08-01\",\n    \"leaveTypeId\": \"1\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-08-04\",\n    \"endDate\": \"2024-08-06\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I need medical leave to recover from a minor surgery I have undergone.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"3\",\n    \"staffId\": \"1\",\n    \"applyDate\": \"2024-09-01\",\n    \"leaveTypeId\": \"2\",\n    \"takenDays\": 5,\n    \"startDate\": \"2024-09-10\",\n    \"endDate\": \"2024-09-14\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I'm planning a trip with my family for a few days to relax and unwind.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"4\",\n    \"staffId\": \"2\",\n    \"applyDate\": \"2024-07-05\",\n    \"leaveTypeId\": \"2\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-07-10\",\n    \"endDate\": \"2024-07-11\",\n    \"phoneDuringLeave\": \"0912334235\",\n    \"reason\": \"I have a family event that requires my presence for two days.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"5\",\n    \"staffId\": \"3\",\n    \"applyDate\": \"2024-07-08\",\n    \"leaveTypeId\": \"1\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-07-15\",\n    \"endDate\": \"2024-07-17\",\n    \"phoneDuringLeave\": \"0912334236\",\n    \"reason\": \"I have a medical condition that requires immediate attention and rest.\",\n    \"leaveStatus\": \"Rejected\"\n  },\n  {\n    \"id\": \"6\",\n    \"staffId\": \"4\",\n    \"applyDate\": \"2024-07-12\",\n    \"leaveTypeId\": \"2\",\n    \"takenDays\": 5,\n    \"startDate\": \"2024-07-20\",\n    \"endDate\": \"2024-07-24\",\n    \"phoneDuringLeave\": \"0912334237\",\n    \"reason\": \"I am planning a vacation with my family and need time off to travel and rest.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"7\",\n    \"staffId\": \"5\",\n    \"applyDate\": \"2024-07-18\",\n    \"leaveTypeId\": \"4\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-07-19\",\n    \"endDate\": \"2024-07-19\",\n    \"phoneDuringLeave\": \"0912334238\",\n    \"reason\": \"I need to attend a personal event that is important and cannot be rescheduled.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"8\",\n    \"staffId\": \"6\",\n    \"applyDate\": \"2024-07-22\",\n    \"leaveTypeId\": \"3\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-07-25\",\n    \"endDate\": \"2024-07-26\",\n    \"phoneDuringLeave\": \"0912334239\",\n    \"reason\": \"I worked extra hours last week and need time off to recover and balance work-life.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"9\",\n    \"staffId\": \"7\",\n    \"applyDate\": \"2024-07-25\",\n    \"leaveTypeId\": \"2\",\n    \"takenDays\": 4,\n    \"startDate\": \"2024-07-29\",\n    \"endDate\": \"2024-08-01\",\n    \"phoneDuringLeave\": \"0912334240\",\n    \"reason\": \"I have planned a family trip for relaxation and to spend quality time with loved ones.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"10\",\n    \"staffId\": \"8\",\n    \"applyDate\": \"2024-07-29\",\n    \"leaveTypeId\": \"1\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-08-01\",\n    \"endDate\": \"2024-08-02\",\n    \"phoneDuringLeave\": \"0912334241\",\n    \"reason\": \"I have a scheduled doctor's appointment and need time to recover after treatment.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"11\",\n    \"staffId\": \"9\",\n    \"applyDate\": \"2024-08-05\",\n    \"leaveTypeId\": \"4\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-08-06\",\n    \"endDate\": \"2024-08-06\",\n    \"phoneDuringLeave\": \"0912334242\",\n    \"reason\": \"I have an urgent personal matter that requires my immediate attention.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"12\",\n    \"staffId\": \"10\",\n    \"applyDate\": \"2024-08-08\",\n    \"leaveTypeId\": \"3\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-08-10\",\n    \"endDate\": \"2024-08-10\",\n    \"phoneDuringLeave\": \"0912334243\",\n    \"reason\": \"I worked during a public holiday and need to take compensatory leave to rest.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"13\",\n    \"staffId\": \"2\",\n    \"applyDate\": \"2024-09-01\",\n    \"leaveTypeId\": \"1\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-09-03\",\n    \"endDate\": \"2024-09-04\",\n    \"phoneDuringLeave\": \"0912334235\",\n    \"reason\": \"I need to visit the doctor for a scheduled check-up and rest afterwards.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"14\",\n    \"staffId\": \"3\",\n    \"applyDate\": \"2024-09-05\",\n    \"leaveTypeId\": \"2\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-09-10\",\n    \"endDate\": \"2024-09-12\",\n    \"phoneDuringLeave\": \"0912334236\",\n    \"reason\": \"I need to attend a family gathering that is scheduled for several days.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"15\",\n    \"staffId\": \"5\",\n    \"applyDate\": \"2024-09-07\",\n    \"leaveTypeId\": \"2\",\n    \"takenDays\": 4,\n    \"startDate\": \"2024-09-11\",\n    \"endDate\": \"2024-09-14\",\n    \"phoneDuringLeave\": \"0912334238\",\n    \"reason\": \"I'm planning a trip to visit relatives and need time off for travel and relaxation.\",\n    \"leaveStatus\": \"Approved\"\n  }\n]",
           "latency": 3000,
           "statusCode": 200,
           "label": "",
@@ -790,112 +786,17 @@
       "responseMode": null
     },
     {
-      "uuid": "47d93011-a6f0-4efb-b272-bcc20f3908e0",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "api/leave/leave-calendar/all",
-      "responses": [
-        {
-          "uuid": "387f375b-255b-4d18-b941-61c0ff3e2d7a",
-          "body": "[\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Ko Ko Kyaw\",\n        \"applyDate\": \"2024-07-01\",\n        \"leaveType\": \"Off-In-Lieu\",\n        \"takenDays\": 1,\n        \"startDate\": \"2024-07-01\",\n        \"endDate\": \"2024-07-03\",\n        \"phoneDuringLeave\": \"0912334234\",\n        \"reason\": \"I need to take a day off to compensate for working on a public holiday.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Ko Ko Kyaw\",\n        \"applyDate\": \"2024-08-01\",\n        \"leaveType\": \"Medical Leave\",\n        \"takenDays\": 3,\n        \"startDate\": \"2024-08-04\",\n        \"endDate\": \"2024-08-06\",\n        \"phoneDuringLeave\": \"0912334234\",\n        \"reason\": \"I need medical leave to recover from a minor surgery I have undergone.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Ko Ko Kyaw\",\n        \"applyDate\": \"2024-09-01\",\n        \"leaveType\": \"Annual Leave\",\n        \"takenDays\": 5,\n        \"startDate\": \"2024-09-10\",\n        \"endDate\": \"2024-09-14\",\n        \"phoneDuringLeave\": \"0912334234\",\n        \"reason\": \"I'm planning a trip with my family for a few days to relax and unwind.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Aung Aung\",\n        \"applyDate\": \"2024-07-05\",\n        \"leaveType\": \"Annual Leave\",\n        \"takenDays\": 2,\n        \"startDate\": \"2024-07-10\",\n        \"endDate\": \"2024-07-11\",\n        \"phoneDuringLeave\": \"0912334235\",\n        \"reason\": \"I have a family event that requires my presence for two days.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Thiri Thiri\",\n        \"applyDate\": \"2024-07-08\",\n        \"leaveType\": \"Medical Leave\",\n        \"takenDays\": 3,\n        \"startDate\": \"2024-07-15\",\n        \"endDate\": \"2024-07-17\",\n        \"phoneDuringLeave\": \"0912334236\",\n        \"reason\": \"I have a medical condition that requires immediate attention and rest.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Mya Mya\",\n        \"applyDate\": \"2024-07-12\",\n        \"leaveType\": \"Annual Leave\",\n        \"takenDays\": 5,\n        \"startDate\": \"2024-07-20\",\n        \"endDate\": \"2024-07-24\",\n        \"phoneDuringLeave\": \"0912334237\",\n        \"reason\": \"I am planning a vacation with my family and need time off to travel and rest.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Zaw Zaw\",\n        \"applyDate\": \"2024-07-18\",\n        \"leaveType\": \"Unpaid Leave\",\n        \"takenDays\": 1,\n        \"startDate\": \"2024-07-19\",\n        \"endDate\": \"2024-07-19\",\n        \"phoneDuringLeave\": \"0912334238\",\n        \"reason\": \"I need to attend a personal event that is important and cannot be rescheduled.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Hla Hla\",\n        \"applyDate\": \"2024-07-22\",\n        \"leaveType\": \"Off-In-Lieu\",\n        \"takenDays\": 2,\n        \"startDate\": \"2024-07-25\",\n        \"endDate\": \"2024-07-26\",\n        \"phoneDuringLeave\": \"0912334239\",\n        \"reason\": \"I worked extra hours last week and need time off to recover and balance work-life.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Moe Moe\",\n        \"applyDate\": \"2024-07-25\",\n        \"leaveType\": \"Annual Leave\",\n        \"takenDays\": 4,\n        \"startDate\": \"2024-07-29\",\n        \"endDate\": \"2024-08-01\",\n        \"phoneDuringLeave\": \"0912334240\",\n        \"reason\": \"I have planned a family trip for relaxation and to spend quality time with loved ones.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Kyaw Kyaw\",\n        \"applyDate\": \"2024-07-29\",\n        \"leaveType\": \"Medical Leave\",\n        \"takenDays\": 2,\n        \"startDate\": \"2024-08-01\",\n        \"endDate\": \"2024-08-02\",\n        \"phoneDuringLeave\": \"0912334241\",\n        \"reason\": \"I have a scheduled doctor's appointment and need time to recover after treatment.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Soe Soe\",\n        \"applyDate\": \"2024-08-05\",\n        \"leaveType\": \"Unpaid Leave\",\n        \"takenDays\": 1,\n        \"startDate\": \"2024-08-06\",\n        \"endDate\": \"2024-08-06\",\n        \"phoneDuringLeave\": \"0912334242\",\n        \"reason\": \"I have an urgent personal matter that requires my immediate attention.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Nyein Nyein\",\n        \"applyDate\": \"2024-08-08\",\n        \"leaveType\": \"Off-In-Lieu\",\n        \"takenDays\": 1,\n        \"startDate\": \"2024-08-10\",\n        \"endDate\": \"2024-08-10\",\n        \"phoneDuringLeave\": \"0912334243\",\n        \"reason\": \"I worked during a public holiday and need to take compensatory leave to rest.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Aung Aung\",\n        \"applyDate\": \"2024-09-01\",\n        \"leaveType\": \"Medical Leave\",\n        \"takenDays\": 2,\n        \"startDate\": \"2024-09-03\",\n        \"endDate\": \"2024-09-04\",\n        \"phoneDuringLeave\": \"0912334235\",\n        \"reason\": \"I need to visit the doctor for a scheduled check-up and rest afterwards.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Thiri Thiri\",\n        \"applyDate\": \"2024-09-05\",\n        \"leaveType\": \"Annual Leave\",\n        \"takenDays\": 3,\n        \"startDate\": \"2024-09-10\",\n        \"endDate\": \"2024-09-12\",\n        \"phoneDuringLeave\": \"0912334236\",\n        \"reason\": \"I need to attend a family gathering that is scheduled for several days.\"\n    },\n    {\n        \"eventType\": \"leave\",\n        \"fullName\": \"Zaw Zaw\",\n        \"applyDate\": \"2024-09-07\",\n        \"leaveType\": \"Annual Leave\",\n        \"takenDays\": 4,\n        \"startDate\": \"2024-09-11\",\n        \"endDate\": \"2024-09-14\",\n        \"phoneDuringLeave\": \"0912334238\",\n        \"reason\": \"I'm planning a trip to visit relatives and need time off for travel and relaxation.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"New Year's Day\",\n        \"startDate\": \"2024-01-01\",\n        \"endDate\": \"\",\n        \"description\": \"The first day of the year, celebrated with various festivities and traditions.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Union Day\",\n        \"startDate\": \"2024-02-12\",\n        \"endDate\": \"\",\n        \"description\": \"Commemorates the signing of the Panglong Agreement in 1947, which paved the way for independence.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Peasants' Day\",\n        \"startDate\": \"2024-03-02\",\n        \"endDate\": \"\",\n        \"description\": \"A day to honor and recognize the contributions of farmers and agricultural workers.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Full Moon Day of Tabaung\",\n        \"startDate\": \"2024-03-25\",\n        \"endDate\": \"\",\n        \"description\": \"A Buddhist festival marking the end of the month of Tabaung.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Armed Forces Day\",\n        \"startDate\": \"2024-03-27\",\n        \"endDate\": \"\",\n        \"description\": \"Celebrates the founding of the modern Myanmar military in 1945.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Thingyan Festival\",\n        \"startDate\": \"2024-04-13\",\n        \"endDate\": \"\",\n        \"description\": \"The Myanmar New Year Water Festival, celebrated with water throwing and various cultural activities.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Labor Day\",\n        \"startDate\": \"2024-05-01\",\n        \"endDate\": \"\",\n        \"description\": \"An international holiday to celebrate workers and labor movements.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Full Moon Day of Kason\",\n        \"startDate\": \"2024-05-23\",\n        \"endDate\": \"\",\n        \"description\": \"Marks the day when Buddha was born, attained enlightenment, and passed away.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Martyrs' Day\",\n        \"startDate\": \"2024-07-19\",\n        \"endDate\": \"\",\n        \"description\": \"Commemorates the assassination of General Aung San and eight others in 1947.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Full Moon Day of Waso\",\n        \"startDate\": \"2024-07-21\",\n        \"endDate\": \"\",\n        \"description\": \"Marks the beginning of the Buddhist Lent, a time of retreat and meditation.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Full Moon Day of Thadingyut\",\n        \"startDate\": \"2024-10-15\",\n        \"endDate\": \"\",\n        \"description\": \"Marks the end of the Buddhist Lent, celebrated with lighting festivals and merit-making.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Full Moon Day of Tazaungmone\",\n        \"startDate\": \"2024-11-13\",\n        \"endDate\": \"\",\n        \"description\": \"Celebrates the offering of new robes to monks and the lighting of oil lamps.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"National Day\",\n        \"startDate\": \"2024-11-23\",\n        \"endDate\": \"\",\n        \"description\": \"Commemorates the start of the student-led protests against British rule in 1920.\"\n    },\n    {\n        \"eventType\": \"holiday\",\n        \"name\": \"Christmas Day\",\n        \"startDate\": \"2024-12-25\",\n        \"endDate\": \"\",\n        \"description\": \"Celebrates the birth of Jesus Christ, observed by the Christian community in Myanmar.\"\n    }\n]",
-          "latency": 3000,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Accept",
-              "value": "application/json"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "ae60938f-8c80-4769-9861-731b1d0209d9",
-          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\"\n}",
-          "latency": 3000,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
-    },
-    {
-      "uuid": "fbe94414-cd39-4048-8780-fa8b77a292e4",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "api/leave/leave-report",
-      "responses": [
-        {
-          "uuid": "c3b30736-e763-4b5c-a417-708dd8f0f309",
-          "body": "[\n  {\n    \"id\": \"1\",\n    \"staffId\": \"1\",\n    \"fullName\": \"Ko Ko Kyaw\",\n    \"applyDate\": \"2024-07-01\",\n    \"leaveType\": \"Off-In-Lieu\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-07-01\",\n    \"endDate\": \"2024-07-03\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I need to take a day off to compensate for working on a public holiday.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"2\",\n    \"staffId\": \"1\",\n    \"fullName\": \"Ko Ko Kyaw\",\n    \"applyDate\": \"2024-08-01\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-08-04\",\n    \"endDate\": \"2024-08-06\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I need medical leave to recover from a minor surgery I have undergone.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"3\",\n    \"staffId\": \"1\",\n    \"fullName\": \"Ko Ko Kyaw\",\n    \"applyDate\": \"2024-09-01\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 5,\n    \"startDate\": \"2024-09-10\",\n    \"endDate\": \"2024-09-14\",\n    \"phoneDuringLeave\": \"0912334234\",\n    \"reason\": \"I'm planning a trip with my family for a few days to relax and unwind.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"4\",\n    \"staffId\": \"2\",\n    \"fullName\": \"Aung Aung\",\n    \"applyDate\": \"2024-07-05\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-07-10\",\n    \"endDate\": \"2024-07-11\",\n    \"phoneDuringLeave\": \"0912334235\",\n    \"reason\": \"I have a family event that requires my presence for two days.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"5\",\n    \"staffId\": \"3\",\n    \"fullName\": \"Thiri Thiri\",\n    \"applyDate\": \"2024-07-08\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-07-15\",\n    \"endDate\": \"2024-07-17\",\n    \"phoneDuringLeave\": \"0912334236\",\n    \"reason\": \"I have a medical condition that requires immediate attention and rest.\",\n    \"leaveStatus\": \"Rejected\"\n  },\n  {\n    \"id\": \"6\",\n    \"staffId\": \"4\",\n    \"fullName\": \"Mya Mya\",\n    \"applyDate\": \"2024-07-12\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 5,\n    \"startDate\": \"2024-07-20\",\n    \"endDate\": \"2024-07-24\",\n    \"phoneDuringLeave\": \"0912334237\",\n    \"reason\": \"I am planning a vacation with my family and need time off to travel and rest.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"7\",\n    \"staffId\": \"5\",\n    \"fullName\": \"Zaw Zaw\",\n    \"applyDate\": \"2024-07-18\",\n    \"leaveType\": \"Unpaid Leave\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-07-19\",\n    \"endDate\": \"2024-07-19\",\n    \"phoneDuringLeave\": \"0912334238\",\n    \"reason\": \"I need to attend a personal event that is important and cannot be rescheduled.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"8\",\n    \"staffId\": \"6\",\n    \"fullName\": \"Hla Hla\",\n    \"applyDate\": \"2024-07-22\",\n    \"leaveType\": \"Off-In-Lieu\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-07-25\",\n    \"endDate\": \"2024-07-26\",\n    \"phoneDuringLeave\": \"0912334239\",\n    \"reason\": \"I worked extra hours last week and need time off to recover and balance work-life.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"9\",\n    \"staffId\": \"7\",\n    \"fullName\": \"Moe Moe\",\n    \"applyDate\": \"2024-07-25\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 4,\n    \"startDate\": \"2024-07-29\",\n    \"endDate\": \"2024-08-01\",\n    \"phoneDuringLeave\": \"0912334240\",\n    \"reason\": \"I have planned a family trip for relaxation and to spend quality time with loved ones.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"10\",\n    \"staffId\": \"8\",\n    \"fullName\": \"Kyaw Kyaw\",\n    \"applyDate\": \"2024-07-29\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-08-01\",\n    \"endDate\": \"2024-08-02\",\n    \"phoneDuringLeave\": \"0912334241\",\n    \"reason\": \"I have a scheduled doctor's appointment and need time to recover after treatment.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"11\",\n    \"staffId\": \"9\",\n    \"fullName\": \"Soe Soe\",\n    \"applyDate\": \"2024-08-05\",\n    \"leaveType\": \"Unpaid Leave\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-08-06\",\n    \"endDate\": \"2024-08-06\",\n    \"phoneDuringLeave\": \"0912334242\",\n    \"reason\": \"I have an urgent personal matter that requires my immediate attention.\",\n    \"leaveStatus\": \"Pending\"\n  },\n  {\n    \"id\": \"12\",\n    \"staffId\": \"10\",\n    \"fullName\": \"Nyein Nyein\",\n    \"applyDate\": \"2024-08-08\",\n    \"leaveType\": \"Off-In-Lieu\",\n    \"takenDays\": 1,\n    \"startDate\": \"2024-08-10\",\n    \"endDate\": \"2024-08-10\",\n    \"phoneDuringLeave\": \"0912334243\",\n    \"reason\": \"I worked during a public holiday and need to take compensatory leave to rest.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"13\",\n    \"staffId\": \"2\",\n    \"fullName\": \"Aung Aung\",\n    \"applyDate\": \"2024-09-01\",\n    \"leaveType\": \"Medical Leave\",\n    \"takenDays\": 2,\n    \"startDate\": \"2024-09-03\",\n    \"endDate\": \"2024-09-04\",\n    \"phoneDuringLeave\": \"0912334235\",\n    \"reason\": \"I need to visit the doctor for a scheduled check-up and rest afterwards.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"14\",\n    \"staffId\": \"3\",\n    \"fullName\": \"Thiri Thiri\",\n    \"applyDate\": \"2024-09-05\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 3,\n    \"startDate\": \"2024-09-10\",\n    \"endDate\": \"2024-09-12\",\n    \"phoneDuringLeave\": \"0912334236\",\n    \"reason\": \"I need to attend a family gathering that is scheduled for several days.\",\n    \"leaveStatus\": \"Approved\"\n  },\n  {\n    \"id\": \"15\",\n    \"staffId\": \"5\",\n    \"fullName\": \"Zaw Zaw\",\n    \"applyDate\": \"2024-09-07\",\n    \"leaveType\": \"Annual Leave\",\n    \"takenDays\": 4,\n    \"startDate\": \"2024-09-11\",\n    \"endDate\": \"2024-09-14\",\n    \"phoneDuringLeave\": \"0912334238\",\n    \"reason\": \"I'm planning a trip to visit relatives and need time off for travel and relaxation.\",\n    \"leaveStatus\": \"Approved\"\n  }\n]",
-          "latency": 3000,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "Accept",
-              "value": "application/json"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
-    },
-    {
       "uuid": "cba66822-b9c3-444c-aff7-2631046c37b2",
       "type": "http",
       "documentation": "",
       "method": "post",
-      "endpoint": "api/leave/apporve-reject-leave",
+      "endpoint": "api/leaves/approve-leave",
       "responses": [
         {
           "uuid": "edbbe852-68b8-4196-ada6-89af95adb904",
           "body": "{\n  \"status\": \"OK\"\n}",
           "latency": 1000,
-          "statusCode": 400,
+          "statusCode": 200,
           "label": "",
           "headers": [
             {
@@ -916,33 +817,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "24edc6d5-dd4d-40cf-84ec-bc571cd31a04",
-          "body": "{\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Invalid request payload.\",\n  \"timestamp\": \"2024-08-19T12:34:56Z\"\n}",
-          "latency": 3000,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "fullName",
-              "value": "",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -2328,6 +2202,44 @@
         }
       ],
       "responseMode": "FALLBACK"
+    },
+    {
+      "uuid": "2b6dc269-f18f-4595-98ff-438f66273781",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/leaves/reject-leave",
+      "responses": [
+        {
+          "uuid": "144d2800-ddab-4bcf-a052-f9e576237b04",
+          "body": "{\n  \"status\": \"OK\"\n}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [

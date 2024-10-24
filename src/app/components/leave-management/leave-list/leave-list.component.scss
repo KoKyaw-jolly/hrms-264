@@ -1,0 +1,32 @@
+@import "../../../../tokens/build/scss/variables.scss";
+@import "../../../../assets/styles/variables.scss";
+
+.leave-action-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: $border-radius-xs;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  i {
+    color: $white;
+  }
+
+  &.approve {
+    background-color: $success-color;
+
+    &:hover {
+        background-color: $success-color-hover;
+    }
+  }
+  &.reject {
+    background-color: $error-color;
+
+    &:hover {
+        background-color: $error-color-hover;
+    }
+  }
+}

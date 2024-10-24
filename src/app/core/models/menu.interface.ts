@@ -99,6 +99,11 @@ export const SideMenuList: Menu[] = [
                 id: "leaveManagementRequest",
                 name: "Leave Request",
                 routelink: "leave-management/leave-request"
+            },
+            {
+                id: "leaveManagementReport",
+                name: "Leave Report",
+                routelink: "leave-management/leave-report"
             }
         ]
     },

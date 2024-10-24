@@ -1,0 +1,90 @@
+<div class="main-card-wrapper">
+    <div>
+        <h4 nz-typography>Leave List</h4>
+        <!-- <p nz-typography nzType="secondary">Organize holidays and manage prefix Holiday for staff efficiently.</p>         -->
+    </div>
+    <form nz-form [nzLayout]="'vertical'">
+        <div class="row">
+            <!-- <div class="col-sm-12 col-md-6 col-lg-3">
+                <nz-form-item>
+                    <nz-form-label nzFor="gender">Gender</nz-form-label>
+                    <nz-form-control>
+                        <nz-range-picker [(ngModel)]="dateRange" (ngModelChange)="dateRangeOnChange($event)"
+                        class="w100" [ngModelOptions]="{standalone: true}"></nz-range-picker>
+                    </nz-form-control>
+                </nz-form-item>
+            </div> -->
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <nz-form-item>
+                    <nz-form-label nzFor="date">Date</nz-form-label>
+                    <nz-form-control>
+                        <nz-date-picker [(ngModel)]="selectDate" [ngModelOptions]="{standalone: true}"
+                            class="w100"></nz-date-picker>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <nz-form-item>
+                    <nz-form-label nzFor="leaevRecordStatus">Leave Record Status</nz-form-label>
+                    <nz-form-control>
+                        <nz-select name="leaevRecordStatus" nzShowSearch [(ngModel)]="leaveRecordStatus"
+                            [ngModelOptions]="{standalone: true}" nzPlaceHolder="select status" nzAllowClear>
+                            <nz-option nzValue="Pending" nzLabel="Pending"></nz-option>
+                            <nz-option nzValue="Approved" nzLabel="Approved"></nz-option>
+                            <nz-option nzValue="Rejected" nzLabel="Rejected"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-control-button">
+                <nz-form-item>
+                    <nz-form-label nzFor="date"> </nz-form-label>
+                    <button nz-button nzType="primary" (click)="search()">Search</button>
+                </nz-form-item>
+            </div>
+        </div>
+    </form>
+    <nz-spin nzTip="Loading..." [nzSpinning]="leaveLoading">
+        <nz-table #leaveRecordList [nzData]="leaveListTableData" [nzScroll]="{x: '1070px'}">
+            <thead>
+                <tr>
+                    <th nzAlign="center" nzWidth="180px" nzLeft>Staff Name</th>
+                    <th nzAlign="center" nzWidth="110px">Apply Date</th>
+                    <th nzAlign="center" nzWidth="160px">Leave Type</th>
+                    <th nzAlign="center" nzWidth="80px">Taken</th>
+                    <th nzAlign="center" nzWidth="120px">Start Date</th>
+                    <th nzAlign="center" nzWidth="120px">End Date</th>
+                    <th nzAlign="center" nzWidth="330px">Reason</th>
+                    <th nzAlign="center" nzWidth="100px">Status</th>
+                    <th nzAlign="center" nzWidth="90px" nzRight>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of leaveRecordList.data">
+                    <td>{{ getStaffName(item.staffId) }}</td>
+                    <td nzAlign="center">{{ item.applyDate | date:'dd MMM yyy' }}</td>
+                    <td nzAlign="center">{{ getLeaveTypeName(item.leaveTypeId) }}</td>
+                    <td nzAlign="center">{{ item.takenDays }} days</td>
+                    <td nzAlign="center">{{ item.startDate | date:'dd MMM yyy' }}</td>
+                    <td nzAlign="center">{{ item.endDate | date:'dd MMM yyy' }}</td>
+                    <td nzAlign="center">{{ item.reason }}</td>
+                    <td nzAlign="center">
+                        <nz-tag [nzColor]="item.leaveStatus === 'Pending' ? 'orange' : 
+                            item.leaveStatus === 'Approved' ? 'green' : 'red'">{{item.leaveStatus}}</nz-tag>
+                    </td>
+                    <td nzRight>
+                        <div class="table-action-wrapper" [class.readonly-section]="item.leaveStatus != 'Pending'">
+                            <span class="leave-action-btn approve" (click)="approveLeave(item)">
+                                <i class="fi fi-rr-check"></i>
+                            </span>
+                            <span class="leave-action-btn reject" (click)="rejectLeave(item)">
+                                <i class="fi fi-rr-cross"></i>
+                            </span>
+                            <!-- <i class="fi fi-rr-info" (click)="details(leaveRecord)"></i> -->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </nz-spin>
+</div>

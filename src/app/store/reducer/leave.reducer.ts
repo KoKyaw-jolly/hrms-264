@@ -31,13 +31,22 @@ export const leaveReducer = createReducer(
     on(leaveAction.loadLeaveRecordsUserFail, (state: any, action) =>
         ({ ...state, loading: false, error: action.error })
     ),
-    on(leaveAction.approveRejectLeave, (state: any) =>
+    on(leaveAction.approveLeave, (state: any) =>
         ({ ...state, loading: true, error: null })
     ),
-    on(leaveAction.approveRejectLeaveSuccess, (state: any) =>
+    on(leaveAction.approveLeaveSuccess, (state: any) =>
         ({ ...state, loading: false , error: null })
     ),
-    on(leaveAction.approveRejectLeaveFail, (state: any, action) =>
+    on(leaveAction.approveLeaveFail, (state: any, action) =>
         ({ ...state, loading: false, error: action.error })
     ),
+    on(leaveAction.rejectLeave, (state: any) =>
+        ({ ...state, loading: true, error: null })
+    ),
+    on(leaveAction.rejectLeaveSuccess, (state: any) =>
+        ({ ...state, loading: false , error: null })
+    ),
+    on(leaveAction.rejectLeaveFail, (state: any, action) =>
+        ({ ...state, loading: false, error: action.error })
+    )
 )

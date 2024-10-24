@@ -21,6 +21,10 @@ export const loadLeaveRecordsUserFail = createAction('[Leave] Load leave records
 // export const loadLeaveReportSuccess = createAction('[Leave] Load leave report success', props<{ leaveReportData: LeaveRecord[] }>());
 // export const loadLeaveReportFail = createAction('[Leave] Load leave report fail', props<{ error: any }>());
 
-export const approveRejectLeave = createAction('[Leave] Approve reject leave', props<{ leaveRecord: LeaveRecord, approveRejectStatus: string }>());
-export const approveRejectLeaveSuccess = createAction('[Leave] Approve reject leave success', props<{ msg: any }>());
-export const approveRejectLeaveFail = createAction('[Leave] Approve reject leave fail', props<{ error: any }>());
+export const rejectLeave = createAction('[Leave] Reject leave', props<{ leaveRecordId: string }>());
+export const rejectLeaveSuccess = createAction('[Leave] Reject leave success', props<{ msg: any }>());
+export const rejectLeaveFail = createAction('[Leave] Reject leave fail', props<{ error: any }>());
+
+export const approveLeave = createAction('[Leave] Appeove leave', props<{ leaveRecordId: string }>());
+export const approveLeaveSuccess = createAction('[Leave] Appeove leave success', props<{ msg: any }>());
+export const approveLeaveFail = createAction('[Leave] Reject Appeove fail', props<{ error: any }>());
